@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* 最简化的移动菜单样式，消除所有可能的冲突 */
 
 /* 移动菜单按钮 - 默认隐藏 */
@@ -30,7 +29,7 @@
 }
 
 /* 移动设备专用样式 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1124px) {
     /* 在移动设备上显示菜单按钮 */
     .mobile-menu {
         display: flex !important; /* 仅在移动设备上显示 */
@@ -97,7 +96,6 @@
         text-align: center;
     }
 }
-=======
 /* Arreglos específicos para el menú responsive */
 
 /* Asegurarse de que el icono del menú móvil solo aparezca en dispositivos móviles */
@@ -106,7 +104,7 @@
 }
 
 /* Mostrar el icono del menú móvil solo en pantallas pequeñas */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1124px) {
     .mobile-menu {
         display: flex !important; /* Forzar que se muestre en móvil */
     }
@@ -118,7 +116,7 @@
 }
 
 /* Asegurar que el menú desplegable se muestre correctamente */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1124px) {
     .nav-wrapper.active {
         display: flex !important;
         z-index: 1000;
@@ -134,4 +132,3 @@
         padding-bottom: 10px;
     }
 }
->>>>>>> da413b58bff9f299fb94f2354221c20899028e68
