@@ -29,10 +29,14 @@
 }
 
 /* 移动设备专用样式 */
-@media screen and (max-width: 1124px) {
+@media screen and (max-width: 1152px) {
     /* 在移动设备上显示菜单按钮 */
     .mobile-menu {
         display: flex !important; /* 仅在移动设备上显示 */
+    }
+    
+    .nav-actions{
+        height: 50px;
     }
     
     /* 导航容器 - 默认在移动端隐藏 */
@@ -44,7 +48,7 @@
         background-color: white;
         display: none; /* 默认隐藏 */
         flex-direction: column;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      
         z-index: 1999;
     }
     
@@ -65,8 +69,8 @@
     /* 导航项目 */
     .nav-links > li {
         width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #f0f0f0;
+        margin: 0 0;
+        height: 50px;
     }
     
     /* 导航链接 */
@@ -95,6 +99,10 @@
         padding: 10px;
         text-align: center;
     }
+    
+    .nav-bar-separator{
+        display: none;
+    }
 }
 /* Arreglos específicos para el menú responsive */
 
@@ -104,7 +112,7 @@
 }
 
 /* Mostrar el icono del menú móvil solo en pantallas pequeñas */
-@media screen and (max-width: 1124px) {
+@media screen and (max-width: 1152px) {
     .mobile-menu {
         display: flex !important; /* Forzar que se muestre en móvil */
     }
@@ -116,10 +124,11 @@
 }
 
 /* Asegurar que el menú desplegable se muestre correctamente */
-@media screen and (max-width: 1124px) {
+@media screen and (max-width: 1152px) {
     .nav-wrapper.active {
         display: flex !important;
         z-index: 1000;
+        height: 100vh;
     }
     
     /* Mejorar la visibilidad de los elementos del menú */

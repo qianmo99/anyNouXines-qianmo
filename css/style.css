@@ -658,36 +658,13 @@ p, div, span, li, a,
 
 /* Asegurar que el dropdown funcione en móvil también */
 @media (max-width: 768px) {
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background-color: rgba(255,255,255,0.1);
-        border-radius: 0;
-        margin-top: 10px;
-    }
-    
-    .dropdown-content .dropdown-item {
-        color: #435947;
-        padding: 10px 20px;
-    }
-    
-    .dropdown-content .dropdown-item:hover {
-        background-color: rgba(255,255,255,0.2);
-    }
-    
-    /* En móvil, mostrar/ocultar con JavaScript */
-    .dropdown-content {
-        display: none;
-    }
-    
-    .dropdown.active .dropdown-content {
-        display: block;
-    }
+   
 }
 
 
 /* Asegurar que no interfiera con otros estilos de nav-link */
-.nav-links li a::after {
+.nav-links li:not(.lang-dropdown) a::after,
+.nav-links li:not(.lang-dropdown) a::after  {
     content: '';
     position: absolute;
     width: 0;
@@ -698,9 +675,9 @@ p, div, span, li, a,
     transition: var(--transition);
 }
 
-.nav-links li a:hover::after,
-.nav-links li a:active::after {
-    width: 100% ;
+.nav-links li:not(.lang-dropdown) a:hover::after,
+.nav-links li:not(.lang-dropdown) a:active::after  {
+    width: 100%;
     left: 0;
 }
 
@@ -828,65 +805,7 @@ document.addEventListener('click', (e) => {
     }
 
     /* 导航栏调整 */
-    .header {
-        padding: 5px 0;
-    }
-
-    .main-nav {
-       
-    }
-
-    .logo {
-       
-    }
-
-    .logo-image {
-        max-height: 40px;
-    }
-
-    .nav-wrapper {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-link {
-        display: block;
-        padding: 10px;
-        background-color: #f9f9f9;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .nav-link:hover {
-        background-color: #f0f0f0;
-    }
-
-    .language-selector {
-        margin-top: 10px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .mobile-menu {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        z-index: 1000;
-        cursor: pointer;
-    }
+   
 
     /* 英雄区域调整 */
     .hero {
