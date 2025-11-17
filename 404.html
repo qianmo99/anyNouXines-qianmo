@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +16,9 @@
         body {
             font-family: 'Noto Sans', sans-serif;
         }
-        
+
         /* Mantenemos el estilo original del navbar */
-        
+
         .error-container {
             background-color: transparent;
             height: 70vh;
@@ -26,24 +27,26 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .error-code {
             font-size: 16rem;
             font-weight: 500;
-            color: #3e573a; /* Verde oscuro */
+            color: #3e573a;
+            /* Verde oscuro */
             margin: 0;
             line-height: 1;
             letter-spacing: normal;
         }
-        
+
         .error-message {
             font-size: 1.5rem;
             color: #333;
             margin: 20px 0 40px;
         }
-        
+
         .btn-tornar-inici {
-            background-color: #dd6c48; /* Color naranja/rojo */
+            background-color: #dd6c48;
+            /* Color naranja/rojo */
             color: white;
             text-decoration: none;
             padding: 12px 24px;
@@ -52,14 +55,15 @@
             transition: background-color 0.3s ease;
             display: inline-block;
         }
-        
+
         .btn-tornar-inici:hover {
             background-color: #c85d3e;
         }
     </style>
 </head>
+
 <body>
-     <div class="navbar">
+    <div class="navbar">
         <nav class="main-nav">
             <div class="logo">
                 <a href="index.html">
@@ -95,25 +99,28 @@
                         </div>
                     </li>
                     <li><a href="qui-som.html" class="nav-link">QUI SOM</a></li>
-                </ul>
-                <p>|</p>
-                <div class="nav-actions">
-                    <div class="language-selector">
-                        <a href="#" class="lang-current">CAT</a>
-                        <div class="lang-dropdown">
-                            <a href="#" class="lang-item active" data-lang="cat">CAT</a>
-                            <a href="#" class="lang-item" data-lang="es">ES</a>
-                            <a href="#" class="lang-item" data-lang="cn">CN</a>
+                    <li class="nav-bar-separator">
+                        |
+                    </li>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="#" class="lang-current">CAT</a>
+                            <div class="lang-dropdown">
+                                <a href="#" class="lang-item active" data-lang="cat">CAT</a>
+                                <a href="#" class="lang-item" data-lang="es">ES</a>
+                                <a href="#" class="lang-item" data-lang="cn">CN</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </ul>
+
             </div>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
     </div>
-    
+
     <script src="js/navigation.js"></script>
     <script src="js/mobile-menu-fix.js"></script>
 
@@ -127,10 +134,5 @@
 
     <script src="js/main.js" defer></script>
 </body>
+
 </html>
-
-
-
-
-
-
