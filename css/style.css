@@ -176,10 +176,10 @@ p, div, span, li, a,
 .nav-links li a:hover,
 .nav-links li a.active {
     color: var(--secondary-green); /* 悬停和激活状态颜色 */
-    background-color: rgba(255,255,255,0.1);
+   /*background-color: rgba(255,255,255,0.1);*/
 }
 
-.nav-links li a::after {
+.nav-links li a::after{
     content: '';
     position: absolute;
     width: 0;
@@ -190,7 +190,8 @@ p, div, span, li, a,
     transition: var(--transition);
 }
 
-.nav-links li a:hover::after {
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
     width: 100%;
     left: 0;
 }
@@ -686,7 +687,7 @@ p, div, span, li, a,
 
 
 /* Asegurar que no interfiera con otros estilos de nav-link */
-.nav-links li:not(.dropdown) a::after {
+.nav-links li a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -697,8 +698,9 @@ p, div, span, li, a,
     transition: var(--transition);
 }
 
-.nav-links li:not(.dropdown) a:hover::after {
-    width: 100%;
+.nav-links li a:hover::after,
+.nav-links li a:active::after {
+    width: 100% ;
     left: 0;
 }
 
