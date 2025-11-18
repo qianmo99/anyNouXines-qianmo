@@ -145,6 +145,7 @@
     z-index: 1001;
     height: 64px;
     align-content: center;
+    width: 70px;
 }
 
 
@@ -301,7 +302,7 @@
     transition: var(--transition);
 }
 
-.nav-links li:not(.lang-dropdown)  a:hover::after{
+.nav-links li  a:not(.lang-item):hover::after{
     width: 100%;
     left: 0;
 }
