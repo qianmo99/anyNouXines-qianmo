@@ -1,7 +1,7 @@
 // 页面加载函数
 function loadPage(event, url) {
   event.preventDefault(); // 阻止默认跳转
-
+  console.log('loadpage')
   fetch(url)
     .then(response => {
       if (!response.ok) throw new Error('加载失败');
@@ -40,4 +40,3 @@ function loadPageDirect(url) {
 
 // 初始化，加载默认页面
 loadPageDirect('home.html');
-console.log('loading index.js')
