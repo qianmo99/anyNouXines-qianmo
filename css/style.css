@@ -52,3 +52,7 @@
     /* Background color is now defined in fixes.css */
     background-color: #f3eee0 !important;
 }
+
+#content{
+    margin-top: 64px;
+}
