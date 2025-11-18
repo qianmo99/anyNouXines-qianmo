@@ -143,7 +143,7 @@
     text-transform: none;
     font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
     /* Body text */
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 300;
     /* Inter Light */
     transition: background-color 0.2s ease;
@@ -351,5 +351,86 @@
     .mobile-menu {
         display: flex !important;
     }
+
+    .nav-wrapper {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        height: 100vh;
+        background: #BAD6BF;
+        background: linear-gradient(0deg, rgba(186, 214, 191, 1) 0%, rgba(255, 246, 228, 1) 100%);
+    }
+
+    .nav-wrapper.active {
+        display: flex;
+    }
+
+    .nav-wrapper.active .navbar{
+        background:none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 0;
+    }
+
+    .nav-links > li {
+        width: 100%;
+        align-content: center;
+        margin: 0;
+    }
+
+    .nav-links>li {
+        min-height: 64px;
+        height: auto;
+    }
+    .nav-link {
+        display: block;
+        padding: 12px;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        background: none;
+        box-shadow: none;
+        background-color: transparent;
+        margin-left: 30px;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex !important; /* Forzar que se muestre solo en móvil */
+    }
+
+    .mobile-menu.active i:before {
+        content: "\f00d"; /* Cambia a icono X cuando está activo */
+    }
+
+    .language-selector {
+        margin-left: 0;
+        background-color: transparent;
+    }
+
+    .language-dropdown {
+        position: static;
+        display: none;
+        background-color: #f9f9f9;
+    }
+    .nav-bar-separator{
+        display: none;
+    }
+
 }
 

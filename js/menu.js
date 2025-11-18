@@ -1,4 +1,40 @@
 
+document.addEventListener('DOMContentLoaded', initializeMenu);
+window.addEventListener('load', initializeMenu);
+
+// 直接实现菜单功能
+function initializeMenu() {
+    console.log('直接初始化菜单');
+
+    // 获取菜单元素
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navWrapper = document.querySelector('.nav-wrapper');
+
+    if (mobileMenuBtn && navWrapper) {
+        // 移除任何现有事件监听器
+        mobileMenuBtn.onclick = null;
+        var newMobileBtn = mobileMenuBtn.cloneNode(true);
+        mobileMenuBtn.parentNode.replaceChild(newMobileBtn, mobileMenuBtn);
+        mobileMenuBtn = newMobileBtn;
+
+        // 添加点击事件
+        mobileMenuBtn.addEventListener('click', function (e) {
+            console.log('内联脚本：菜单按钮被点击');
+            e.preventDefault();
+            e.stopPropagation();
+
+            // 切换菜单显示状态
+            navWrapper.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+
+            console.log('菜单状态:', navWrapper.classList.contains('active') ? '显示' : '隐藏');
+        });
+    } else {
+        console.error('未找到菜单元素');
+    }
+}
+
+
 // Language selector functionality
 document.addEventListener('DOMContentLoaded', function() {
     const languageSelectors = document.querySelectorAll('.language-selector');
