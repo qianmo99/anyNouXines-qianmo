@@ -1,0 +1,65 @@
+
+/* 404错误页面样式 */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 0 20px;
+}
+
+.error-page {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.error-code {
+    font-size: 15rem;
+    font-weight: 300;
+    color: #435947;
+    margin-bottom: 0;
+    line-height: 1;
+    letter-spacing: -10px;
+}
+
+.error-message {
+    font-size: 1.2rem;
+    color: #435947;
+    margin-bottom: 30px;
+}
+
+.btn-tornar-inici {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    border-radius: 0;
+}
+
+.btn-tornar-inici:hover {
+    background-color: #ff5252;
+}
+
+
+.error-container {
+    height: 100vh;
+    padding: 0 15px;
+}
+
+.error-code {
+    font-size: 8rem;
+    letter-spacing: -5px;
+}
+
+.error-message {
+    font-size: 1rem;
+}

@@ -15,6 +15,8 @@ function loadPage(event, url) {
       document.getElementById('content').innerHTML = '<p>加载失败</p>';
       console.error(err);
     });
+
+    //关闭menu
     var mobileMenuBtn = document.querySelector('.mobile-menu');
     var navWrapper = document.querySelector('.nav-wrapper');
     navWrapper.classList.toggle('active');
@@ -38,3 +40,4 @@ function loadPageDirect(url) {
 
 // 初始化，加载默认页面
 loadPageDirect('home.html');
+console.log('loading index.js')

@@ -3,11 +3,142 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/faq.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <h1>home</h1>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>2025 龙年新春庆典</h1>
+                <p>欢迎来到中国新年庆祝活动</p>
+                <a href="#events" class="cta-button">查看活动.</a>
+            </div>
+        </section>
 
+        <section class="info-section">
+            <div class="info-container">
+                <div class="info-card">
+                    <div class="info-image">
+                        <img src="assets/images/any.xines/lion.png" alt="Lleó xinès tradicional" class="tradicio-image">
+                    </div>
+                    <div class="info-text">
+                        <h2>Queden <span id="countdown-days">--</span> dies per a l'Any Nou Xinès</h2>
+                        <p>Del 17 de febrer celebra la cultura xinesa a Barcelona: desfilades, dansa del drac, tallers i
+                            concerts.</p>
+                        <a href="#" class="info-button">Consulta programació</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-text">
+                        <h2>Any Nou Xinès</h2>
+                        <p>L'Any Nou Xinès és un viatge de colors, llums i tradicions.</p>
+                        <p>Una festa que reuneix famílies, celebra la renovació i obre un pont entre la cultura xinesa i
+                            Barcelona, per començar l'any amb esperança i bons desitjos.</p>
+                        <a href="#" class="info-button">Coneix la cultura</a>
+                    </div>
+                    <div class="info-image">
+                        <img src="assets/images/any.xines/shiwu0002.png" alt="Cultura i tradicions xineses"
+                            class="tradicio-image">
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-image">
+                        <img src="assets/images/any.xines/Mask group.png" alt="Any del Cavall 2026"
+                            class="tradicio-image">
+                    </div>
+                    <div class="info-text">
+                        <h2>Any del Cavall - 2026</h2>
+                        <p>El zodíac xinès és un cicle de 12 animals, i cada any un d'ells marca l'energia i els trets
+                            que inspiren la vida.</p>
+                        <p>El Cavall simbolitza llibertat i passió. El 2026 ens convida a avançar amb energia, valentia
+                            i confiança cap a nous horitzons.</p>
+                        <a href="#" class="info-button">Descobreix el teu Zodíac Xinès</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="moments-section">
+            <h1>MOMENTS DE L'ANY NOU XINÈS</h1>
+            <div class="carousel" aria-roledescription="carousel" aria-label="Moments de l'Any Nou Xinès">
+                <div class="track" id="track" role="list"></div>
+
+                <div class="controls" aria-hidden="true">
+                    <button class="btn prev" title="Anterior" aria-label="Anterior">
+                        <img src="assets/images/button/arrow left.svg" alt="Anterior" class="arrow-icon">
+                    </button>
+                    <button class="btn next" title="Següent" aria-label="Següent">
+                        <img src="assets/images/button/arrow right.svg" alt="Següent" class="arrow-icon">
+                    </button>
+                </div>
+
+                <div class="dots" id="dots" aria-label="Indicadors"></div>
+                <p class="visually-hidden" id="sr-status" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>PREGUNTES FREQÜENTS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>1. Quan se celebra l'Any Nou Xinès a Barcelona?</h3>
+                        <button class="faq-toggle">
+                            <img src="assets/images/button/arrow under.svg" alt="Flecha abajo" class="faq-arrow-under">
+                            <img src="assets/images/button/arrow top.svg" alt="Flecha arriba" class="faq-arrow-top">
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cada any la data canvia perquè segueix el calendari lunar. A Barcelona, la celebració se sol
+                            fer al febrer amb desfilades, tallers i espectacles.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>2. On tenen lloc les activitats principals?</h3>
+                        <button class="faq-toggle">
+                            <img src="assets/images/button/arrow under.svg" alt="Flecha abajo" class="faq-arrow-under">
+                            <img src="assets/images/button/arrow top.svg" alt="Flecha arriba" class="faq-arrow-top">
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El punt central és el Passeig de Lluís Companys i l'Arc de Triomf, però també hi ha
+                            activitats a diferents barris i centres culturals.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>3. Cal pagar entrada?</h3>
+                        <button class="faq-toggle">
+                            <img src="assets/images/button/arrow under.svg" alt="Flecha abajo" class="faq-arrow-under">
+                            <img src="assets/images/button/arrow top.svg" alt="Flecha arriba" class="faq-arrow-top">
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, totes les activitats són gratuïtes i obertes a tothom.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>4. Puc participar encara que no sigui de la comunitat xinesa?</h3>
+                        <button class="faq-toggle">
+                            <img src="assets/images/button/arrow under.svg" alt="Flecha abajo" class="faq-arrow-under">
+                            <img src="assets/images/button/arrow top.svg" alt="Flecha arriba" class="faq-arrow-top">
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí! La festa està oberta a tothom.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/faq.js"></script>
 </body>
+
 </html>

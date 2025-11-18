@@ -1,8 +1,10 @@
-// FAQ functionality
+
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
     const faqToggles = document.querySelectorAll('.faq-toggle');
-console.log(faqItems)
+    console.log("loading faq.js")
+    console.log(faqItems)
+
     // Function to toggle FAQ item
     function toggleFaq(item) {
         const answer = item.querySelector('.faq-answer');

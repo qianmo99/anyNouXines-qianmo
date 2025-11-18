@@ -50,4 +50,5 @@
     font-weight: 300; /* Avenir Book */
     color: #435947;
     /* Background color is now defined in fixes.css */
+    background-color: #f3eee0 !important;
 }
