@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Any Nou Xinès Barcelona</title>
@@ -17,39 +18,39 @@
     <div class="navbar">
         <nav class="main-nav">
             <div class="logo">
-                <a href="index.html">
+                <a href="#" onclick="loadPage(event, 'home.html')">
                     <img src="assets/images/LOGO copy.png" alt="Any Nou Xinés Logo" class="logo-image">
                 </a>
             </div>
             <div class="nav-wrapper">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link active">INICI</a></li>
+                    <li><a href="#" onclick="loadPage(event, 'home.html')" class="nav-link active">INICI</a></li>
                     <li class="dropdown">
                         <a class="nav-link">DRACS I ESTRELLES</a>
                         <div class="dropdown-content">
-                            <a href="any-nou-xines.html" class="dropdown-item">Història i origen</a>
-                            <a href="404.html" class="dropdown-item">Zodíac xinès</a>
+                            <a href="#" onclick="loadPage(event, 'historia-origen.html')" class="dropdown-item">Història i origen</a>
+                            <a href="#" onclick="loadPage(event, '404.html')" class="dropdown-item">Zodíac xinès</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a class="nav-link">ACTIVITATS</a>
                         <div class="dropdown-content">
-                            <a href="activitats.html" class="dropdown-item">Programació</a>
-                            <a href="404.html" class="dropdown-item">Activitats Paral·leles</a>
-                            <a href="404.html" class="dropdown-item">Inscriu Activitat</a>
+                            <a href="#" onclick="loadPage(event, 'programa.html')" class="dropdown-item">Programació</a>
+                            <a href="#" onclick="loadPage(event, '404.html')"  class="dropdown-item">Activitats Paral·leles</a>
+                            <a href="#" onclick="loadPage(event, '404.html')"  class="dropdown-item">Inscriu Activitat</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a class="nav-link">GALERIA</a>
                         <div class="dropdown-content">
-                            <a href="galeria-2025.html" class="dropdown-item">2025</a>
-                            <a href="404.html" class="dropdown-item">2023</a>
-                            <a href="404.html" class="dropdown-item">2022</a>
-                            <a href="404.html" class="dropdown-item">2021</a>
-                            <a href="404.html" class="dropdown-item">2017</a>
+                            <a href="#" onclick="loadPage(event, 'galeria.html')"class="dropdown-item">2025</a>
+                            <a href="#" onclick="loadPage(event, '404.html')" class="dropdown-item">2023</a>
+                            <a href="#" onclick="loadPage(event, '404.html')"  class="dropdown-item">2022</a>
+                            <a href="#" onclick="loadPage(event, '404.html')"  class="dropdown-item">2021</a>
+                            <a href="#" onclick="loadPage(event, '404.html')"  class="dropdown-item">2017</a>
                         </div>
                     </li>
-                    <li><a href="qui-som.html" class="nav-link">QUI SOM</a></li>
+                    <li><a href="#" onclick="loadPage(event, 'qui-som.html')"   class="nav-link">QUI SOM</a></li>
                     <li class="nav-bar-separator">
                         |
                     </li>
@@ -74,6 +75,10 @@
         </nav>
     </div>
 
+    <div id="content">
+        <!-- 页面内容会加载到这里 -->
+    </div>
+    <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
 </body>
 
