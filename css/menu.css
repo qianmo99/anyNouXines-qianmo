@@ -1,0 +1,308 @@
+/* Navigation bar overall layout */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Avenir'; /* Navigation titles */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+    background: #FFF6E4;
+    background: linear-gradient(0deg, rgba(255, 246, 228, 1) 0%, rgba(186, 214, 191, 1) 100%);
+}
+
+/* This style is kept but not used - all pages now use navbar instead */
+.header {
+    display: none;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 5%;
+    height: 64px;
+    background-color: transparent;
+}
+
+.logo-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.logo .logo-image {
+    transition: transform 0.2s ease;
+}
+
+.logo .logo-image:hover {
+    transform: scale(1.05);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 24px;
+    background-color: transparent;
+    font-family: 'Avenir'; /* Titles */
+    
+    
+}
+
+.nav-links > li {
+    height: 64px;
+    position: relative;
+    background-color: transparent;
+    align-content: center;
+    margin: 0 15px;
+}
+
+.nav-links li:hover>a, .nav-links li a.active{
+    color: var(--secondary-green);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #435947;
+    text-transform: uppercase;
+    font-family: 'Avenir'; /* Titles */
+    font-weight: 700; /* Playfair Display Bold */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+    background-color: transparent;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    background-color: transparent;
+    z-index: 1001;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #BAD6BF;
+    background: linear-gradient(0deg, rgba(186, 214, 191, 1) 0%, rgba(255, 246, 228, 1) 100%);
+    min-width: 180px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 0px 0px 5px 5px;
+    padding: 8px 0;
+    z-index: 1001;
+    animation: fadeIn 0.2s ease;
+    overflow: visible;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content .dropdown-item {
+    display: block;
+    padding: 8px 16px;
+    color: #435947;
+    text-decoration: none;
+    text-transform: none;
+    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif; /* Body text */
+    font-size: 0.8rem;
+    font-weight: 300; /* Inter Light */
+    transition: background-color 0.2s ease;
+    background-color: transparent;
+    position: relative;
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+    margin-left: 16px;
+    background-color: transparent;
+    z-index: 1001;
+    height: 64px;
+    align-content: center;
+}
+
+
+.language-selector .lang-current {
+    color: #435947;
+    font-family: 'Avenir'; /* Igual que .nav-link */
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 15px;
+    text-decoration: none !important;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    /*display: inline-block;*/
+}
+
+.language-selector .lang-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    
+}
+
+.language-selector:hover .lang-dropdown {
+    display: block;
+}
+
+.language-selector:hover .lang-current {
+    color: #92af83;
+    
+    text-decoration: none !important;
+}
+
+/* Evitar cualquier estilo de enlace por defecto */
+.language-selector a,
+.language-selector a:link,
+.language-selector a:visited,
+.language-selector a:hover,
+.language-selector a:active {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+
+
+.language-selector .lang-dropdown .lang-item {
+    color: #435947;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+}
+
+.language-selector .lang-dropdown .lang-item:hover {
+    background-color: #f0f4f0;
+    color: #435947;
+    text-decoration: none !important;
+}
+
+.language-selector .lang-dropdown .lang-item.active {
+    background-color: #435947;
+    color: white;
+}
+
+
+.selected-lang {
+    background: none;
+    border: none;
+    color: #435947;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.2s ease;
+}
+
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 8px 0;
+    z-index: 10;
+    animation: fadeIn 0.2s ease;
+}
+
+.language-selector:hover .language-dropdown {
+    display: block;
+}
+
+.language-option {
+    display: block;
+    padding: 8px 16px;
+    color: #435947;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease;
+}
+
+.language-option:hover {
+    background-color: #f4f4f4;
+}
+
+.mobile-menu {
+    display: none; /* Oculto por defecto en escritorio */
+    cursor: pointer;
+    z-index: 1010;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu i {
+    font-size: 24px;
+    color: #435947;
+}
+
+
+/* nav hover animation*/
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-green);
+    transition: var(--transition);
+}
+
+.nav-links li:not(.lang-dropdown)  a:hover::after{
+    width: 100%;
+    left: 0;
+}
+

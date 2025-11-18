@@ -1,0 +1,938 @@
+/* Import navigation and global styles */
+/* Define local fonts */
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('../assets/typography/IvyOra display-20250901T000910Z-1-001/IvyOra display/IvyOraDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/typography/Avenir-20250901T000905Z-1-001/Avenir/AvenirLTStd-Book.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/typography/Avenir-20250901T000905Z-1-001/Avenir/AvenirLTStd-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/* 
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('webfont.ttf')  format('truetype'),
+         url("path/GraublauWebBold.otf") format("opentype");
+}
+*/
+
+
+:root {
+    --primary-green: #5a7860;
+    --secondary-green: #92af83;
+    --light-green: #c5d6c2;
+    --white: #ffffff;
+    --text-color: #435947;
+    --transition: all 0.3s ease;
+    --title-font: 'IvyOra Display', 'Georgia', serif; /* Original IvyOra Bold */
+    --body-font: 'Avenir', 'Helvetica Neue', Arial, sans-serif; /* Original Avenir Book */
+}
+
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-weight: 300; /* Avenir Book */
+    color: #435947;
+    /* Background color is now defined in fixes.css */
+}
+
+/* Global title styles */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero h1,
+.gallery-title,
+.moments-title,
+.impulsors-section h1 {
+    font-family: var(--title-font);
+    font-weight: 700; /* IvyOra Display Bold */
+}
+
+/* Navigation also uses titles */
+.nav-link {
+    font-family: var(--title-font);
+    font-weight: 600;
+}
+
+/* Body text */
+body, html,
+.hero p,
+.section-description,
+p, div, span, li, a,
+.dropdown-item {
+    font-family: var(--body-font);
+    font-weight: 300; /* Avenir Book */
+}
+
+/* 导航栏样式 - Commented out to avoid conflicts with navigation.css */
+/* 
+.header {
+    background-color: #f0f4f0;
+    box-shadow: none;
+    padding: 10px 0;
+}
+*/
+
+/* Main nav styles moved to navigation.css */
+/*
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+*/
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.logo-image {
+    width: 150px;  /* 调整 logo 宽度 */
+    height: auto; /* 保持宽高比 */
+    margin-right: 20px; /* 与文字间距 */
+}
+
+.logo .logo-image {
+    max-height: 150px;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #435947;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6b6b;
+}
+
+.nav-wrapper p {
+    margin: 0 15px;
+    color: #ccc;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--primary-green); /* 导航链接颜色改为绿色 */
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition:  var(--transition);
+    position: relative;
+    opacity: 1; /* 移除透明度 */
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--secondary-green); /* 悬停和激活状态颜色 */
+   /*background-color: rgba(255,255,255,0.1);*/
+}
+
+.nav-links li a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-green);
+    transition: var(--transition);
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+.contact-btn {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-btn:hover {
+    background-color: var(--light-green);
+}
+
+.mobile-menu {
+    display: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* 其他现有的样式保持不变 */
+
+.hero {
+    text-align: center;
+    padding: 100px 5%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.about, .events, .gallery {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.about-content img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.event-grid, .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.event-card, .gallery-grid img {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover, .gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.event-card img, .gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Contact form styles moved to contact-form.css */
+
+/* FAQ styles moved to faq.css */
+
+/* 页脚样式 */
+.main-footer {
+    background-color: white;
+}
+
+.footer-sponsors {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.sponsor-logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    transition: transform 0.5s ease;
+}
+
+.sponsor-logos img {
+    max-height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .sponsor-logos {
+        gap: 30px;
+    }
+
+    .sponsor-logos img {
+        max-height: 40px;
+        max-width: 100px;
+    }
+}
+
+.footer-background {
+    background-color: #f0f4f1;
+    padding: 50px 5%;
+    position: relative;
+    background-image: url('../assets/images/mountain-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.social-logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon img:hover {
+    opacity: 1;
+}
+
+.footer-copyright {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .sponsor-logos {
+        gap: 20px;
+    }
+
+    .sponsor-logos img {
+        max-height: 40px;
+        max-width: 100px;
+    }
+
+    .social-logo img {
+        max-width: 150px;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Carousel styles moved to carousel.css */
+
+@media (max-width: 768px) {
+}
+
+/* 信息部分样式 */
+.info-section {
+    background-color: transparent;
+    padding: 50px 5%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: transparent;
+    gap: 40px;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-text h2 {
+    font-size: 1.5rem;
+    color: #435947;
+}
+
+.info-text p {
+    color: #435947;
+    line-height: 1.6;
+}
+
+.info-button {
+    display: inline-block;
+    width: fit-content;
+    background-color: #dd7050;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #c45a3c;
+}
+
+.info-image {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.tradicio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.info-image:hover .tradicio-image {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .info-image {
+        height: 300px;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+/* 404错误页面样式 */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 0 20px;
+}
+
+.error-page {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.error-code {
+    font-size: 15rem;
+    font-weight: 300;
+    color: #435947;
+    margin-bottom: 0;
+    line-height: 1;
+    letter-spacing: -10px;
+}
+
+.error-message {
+    font-size: 1.2rem;
+    color: #435947;
+    margin-bottom: 30px;
+}
+
+.btn-tornar-inici {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    border-radius: 0;
+}
+
+.btn-tornar-inici:hover {
+    background-color: #ff5252;
+}
+
+/* 移动端适配 - Mobile navigation moved to navigation.css */
+@media (max-width: 768px) {
+    /* These styles are now in navigation.css
+    .nav-wrapper {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-wrapper.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+    */
+
+    .error-container {
+        height: 100vh;
+        padding: 0 15px;
+    }
+
+    .error-code {
+        font-size: 8rem;
+        letter-spacing: -5px;
+    }
+
+    .error-message {
+        font-size: 1rem;
+    }
+}
+
+
+/* Estilos para el dropdown de navegación */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content .dropdown-item {
+    color: #435947;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dropdown-content .dropdown-item:hover {
+    /* background-color: #f0f4f0; */
+    color: var(--primary-green);
+}
+
+/* Mostrar el dropdown al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Cambiar el estilo del enlace padre al hacer hover */
+.dropdown:hover .nav-link {
+    color: var(--secondary-green);
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Asegurar que el dropdown funcione en móvil también */
+@media (max-width: 768px) {
+   
+}
+
+
+/* Asegurar que no interfiera con otros estilos de nav-link */
+.nav-links li:not(.lang-dropdown) a::after,
+.nav-links li:not(.lang-dropdown) a::after  {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-green);
+    transition: var(--transition);
+}
+
+.nav-links li:not(.lang-dropdown) a:hover::after,
+.nav-links li:not(.lang-dropdown) a:active::after  {
+    width: 100%;
+    left: 0;
+}
+
+/* JavaScript para dispositivos móviles */
+/*
+// Agregar este código JavaScript al final de tu archivo main.js o en el HTML
+
+// Dropdown para dispositivos móviles
+const dropdownItems = document.querySelectorAll('.dropdown');
+dropdownItems.forEach(dropdown => {
+    const dropdownLink = dropdown.querySelector('.nav-link');
+    
+    dropdownLink.addEventListener('click', (e) => {
+        // Solo prevenir el comportamiento por defecto en móvil
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+            
+            // Cerrar otros dropdowns
+            dropdownItems.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// Cerrar dropdown al hacer click fuera
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+        dropdownItems.forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
+});
+*/
+
+/* FAQ styles moved to faq.css */
+
+/* 平板横屏适配 */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    /* 导航栏调整 */
+    .main-nav {
+        padding: 0 3%;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    /* 英雄区域调整 */
+    .hero {
+        padding: 50px 3%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* 网格布局调整 */
+    .event-grid, .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .event-card img, .gallery-grid img {
+        height: 200px;
+    }
+
+    /* 关于部分调整 */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    /* 信息卡片调整 */
+    .info-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .info-image {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .info-text h2 {
+        font-size: 1.3rem;
+    }
+
+    /* 时刻轮播调整 */
+    /* Carousel styles moved to carousel.css */
+
+    /* FAQ styles moved to faq.css */
+
+    /* 页脚调整 */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-logo img {
+        max-width: 150px;
+    }
+}
+
+/* 移动设备适配 */
+@media screen and (max-width: 767px) {
+    /* 全局布局调整 */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* 导航栏调整 */
+   
+
+    /* 英雄区域调整 */
+    .hero {
+        padding: 30px 3%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    /* 网格布局调整 */
+    .event-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .event-card img, .gallery-grid img {
+        height: 250px;
+        border-radius: 8px;
+    }
+
+    /* 关于部分调整 */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-content img {
+        max-width: 100%;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    /* 信息卡片调整 */
+    .info-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .info-image {
+        height: 250px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .info-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .info-text p {
+        font-size: 0.9rem;
+    }
+
+    .info-button {
+        margin-top: 10px;
+    }
+
+    /* Carousel styles moved to carousel.css */
+
+    /* FAQ styles moved to faq.css */
+
+    /* 页脚调整 */
+    .footer-background {
+        padding: 30px 3%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-logo img {
+        max-width: 120px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+
+    /* 赞助商调整 */
+    .footer-sponsors {
+        padding: 20px 0;
+    }
+
+    .sponsor-logos {
+        gap: 15px;
+    }
+
+    .sponsor-logos img {
+        max-height: 30px;
+        max-width: 80px;
+    }
+
+    /* 错误页面调整 */
+    .error-container {
+        padding: 0 15px;
+    }
+
+    .error-code {
+        font-size: 6rem;
+        letter-spacing: -3px;
+    }
+
+    .error-message {
+        font-size: 0.9rem;
+    }
+}
