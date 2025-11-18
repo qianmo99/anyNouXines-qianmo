@@ -15,6 +15,10 @@ function loadPage(event, url) {
       document.getElementById('content').innerHTML = '<p>加载失败</p>';
       console.error(err);
     });
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navWrapper = document.querySelector('.nav-wrapper');
+    navWrapper.classList.toggle('active');
+    mobileMenuBtn.classList.toggle('active');
 }
 
 // 处理浏览器前进/后退

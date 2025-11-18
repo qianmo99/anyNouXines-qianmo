@@ -110,7 +110,7 @@
     left: 0;
     background: #BAD6BF;
     background: linear-gradient(0deg, rgba(186, 214, 191, 1) 0%, rgba(255, 246, 228, 1) 100%);
-    min-width: 180px;
+    min-width: 100px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 5px 5px;
     padding: 8px 0;
@@ -184,7 +184,7 @@
     display: none;
     position: absolute;
     background-color: #ffffff;
-    min-width: 90px;
+    min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     border-radius: 0px 0px 5px 5px;
@@ -217,7 +217,9 @@
 
 
 
+
 .language-selector .lang-dropdown .lang-item {
+    position: relative;
     color: #435947;
     padding: 12px 16px;
     text-decoration: none !important;
@@ -231,16 +233,29 @@
 }
 
 .language-selector .lang-dropdown .lang-item:hover {
-    background-color: #f0f4f0;
     color: #435947;
     text-decoration: none !important;
 }
 
+/*
 .language-selector .lang-dropdown .lang-item.active {
     background-color: #435947;
     color: white;
 }
-
+*/
+.language-selector .lang-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #BAD6BF;
+    background: linear-gradient(0deg, rgba(186, 214, 191, 1) 0%, rgba(255, 246, 228, 1) 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 5px 5px;
+    padding: 8px 0;
+    z-index: 1001;
+    animation: fadeIn 0.2s ease;
+    overflow: visible;
+}
 
 .selected-lang {
     background: none;
@@ -285,7 +300,6 @@
 }
 
 .language-option:hover {
-    background-color: #f4f4f4;
 }
 
 .mobile-menu {
@@ -320,8 +334,8 @@
     transition: var(--transition);
 }
 
-.nav-links li a:not(.lang-item):hover::after,
-.nav-links li a:not(.lang-item).active::after
+.nav-links li a:hover::after,
+.nav-links li a.active:not(.lang-item)::after
  {
     width: 100%;
     left: 0;
@@ -396,7 +410,7 @@
         padding: 12px;
     }
 
-    .dropdown-content {
+    .dropdown-content{
         position: static;
         display: none;
         background: none;
@@ -407,6 +421,27 @@
 
     .dropdown:hover .dropdown-content,
     .dropdown.active .dropdown-content {
+        display: block;
+    }
+    .language-selector .lang-dropdown{
+        display: none;
+        background: none;
+        box-shadow: none;
+        background-color: transparent;
+        margin-left: 30px;
+    }
+
+    .language-selector {
+        position: relative;
+        display: block;
+        background-color: transparent;
+        z-index: 1001;
+        height: 64px;
+        align-content: center;
+        width: auto;
+    }
+
+    .lang-current{
         display: block;
     }
 
