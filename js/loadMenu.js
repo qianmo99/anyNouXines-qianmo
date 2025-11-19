@@ -7,7 +7,7 @@ function loadNav() {
 
       // 动态加载导航栏 JS
       const script = document.createElement("script");
-      script.src = "/js/menu.js";
+      script.src = "js/menu.js";
       document.body.appendChild(script);
     });
 }
