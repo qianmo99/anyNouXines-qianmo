@@ -1,335 +1,138 @@
-  /* 新增的章节导航样�?*/
-  .section-navigation {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      left: auto;
-      transform: none;
-      display: flex;
-      gap: 15px;
-      z-index: 1000;
-      background-color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .section-navigation .nav-btn {
-      background-color: #f0f0f0;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-  }
-
-  .section-navigation .nav-btn:hover {
-      background-color: #e0e0e0;
-  }
-
-  .section-navigation .arrow-icon {
-      width: 20px;
-      height: 20px;
-  }
-
-  .section-navigation .nav-btn.disabled {
-      opacity: 0.3;
-      cursor: not-allowed;
-  }
-
-  /* Mobile responsive improvements */
-  @media (max-width: 768px) {
-      .section-navigation {
-          bottom: 15px;
-          right: 15px;
-          padding: 8px 15px;
-          gap: 10px;
-      }
-
-      .section-navigation .nav-btn {
-          width: 35px;
-          height: 35px;
-      }
-
-      .section-navigation .arrow-icon {
-          width: 16px;
-          height: 16px;
-      }
-
-      .back-home-btn {
-          top: 15px;
-          left: 15px;
-          padding: 10px;
-          width: 42px;
-          height: 42px;
-      }
-
-      .back-arrow-icon {
-          width: 18px;
-          height: 18px;
-      }
-
-
-  }
-
-  /* Small mobile devices */
-  @media (max-width: 480px) {
-      .section-navigation {
-          bottom: 10px;
-          right: 10px;
-          padding: 6px 12px;
-      }
-
-      .section-navigation .nav-btn {
-          width: 30px;
-          height: 30px;
-      }
-
-      .section-navigation .arrow-icon {
-          width: 14px;
-          height: 14px;
-      }
-  }
-
-
-  /* Reset and base styles */
-.slider {
+/* --- 默认：桌面版（>=900px）为横向滚动 --- */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Back to home button styles */
-.back-home-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1100;
-    text-decoration: none;
-    color: #435947;
-    background-color: white;
-    padding: 12px;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-}
-
-.back-arrow-icon {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
-.back-home-btn:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.back-home-btn:hover .back-arrow-icon {
-    transform: translateX(-2px);
-}
-
-/* Horizontal scroll container */
-.horizontal-scroll-container {
-    width: 100%;
-    height: calc(100vh - 64px);
-    overflow: hidden;
-    display: flex;
+    font-family: Arial, sans-serif;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    overflow-y: hidden;
+    height: 100vh;
+    scroll-behavior: smooth;
+    padding-top: 64px; /* 顶部预留导航栏空间 */
 }
 
-.horizontal-scroll-container::-webkit-scrollbar {
-    display: none; /* WebKit */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    height: calc(100vh - 64px); /* 减去顶部导航栏高度 */
 }
 
 .scroll-section {
-    min-width: 100%;
-    height: 100%;
-    scroll-snap-align: start;
+    width: 100vw;
+    height: calc(100vh - 64px); /* 同步减少高度 */
+    flex-shrink: 0;
     display: flex;
-    align-items: stretch;
-    position: relative;
-    padding-left: 50px; /* Space for back button */
-}
-
-/* Basic styles for each section */
-#historia-origen {
-    background-color: #f3eee0;
-}
-
-#tradicions {
-    background-color: #f3eee0;
-}
-
-#celebracio {
-    background-color: #f3eee0;
-}
-
-.section-title {
-    font-family: 'IvyOra Display', 'Georgia', serif; /* Titles - Original IvyOra Bold */
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-align: left;
-    font-weight: 700; /* IvyOra Display Bold */
-    color: #263238;
-}
-
-.section-description {
-    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif; /* Cuerpo de texto - Avenir Book original */
-    font-weight: 300; /* Avenir Book */
-    max-width: 800px;
-    text-align: left;
-    line-height: 1.6;
-    font-size: 1.1rem;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Fade-in effects */
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: white;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s ease-out;
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
-/* Tablet responsive (768px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .section-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-description {
-        font-size: 1rem;
-        max-width: 600px;
-    }
-    
-    .historia-details {
-        padding: 3% 3% 3% calc(40% + 30px);
-    }
+/* 导航按钮（桌面显示） */
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
 }
 
-/* Mobile responsive (max-width: 768px) */
-@media (max-width: 768px) {
-    .horizontal-scroll-container {
-        flex-direction: column;
+button {
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- 移动端：宽度 <900px 时切换成纵向滚动 --- */
+@media (max-width: 900px) {
+    body {
         overflow-x: hidden;
         overflow-y: scroll;
         height: auto;
-        scroll-snap-type: y mandatory;
+        padding-top: 64px;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
     .scroll-section {
-        min-height: 100vh;
-        width: 100%;
-        padding: 20px 15px;
-        min-width: auto;
-        scroll-snap-align: start;
+        width: 100vw;
+        height: calc(100vh - 64px); /* 移动端同样减少高度 */
+        transform: translateY(60px);
     }
 
-    .historia-content {
+    .fade-in.visible {
+        transform: translateY(0);
+    }
+
+    /* 移动端不显示左右按钮 */
+    .nav-buttons {
+        display: none;
+    }
+}
+
+/* 顶部导航栏 */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 999;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+.top-nav a:hover {
+    color: #007bff;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* section css */
+.scroll-section {
+    box-sizing: border-box;
+    border: 1px solid #333;
+}
+/*page 1*/
+.historia-content {
         flex-direction: column;
         height: auto;
         padding: 0;
     }
-
     .historia-tree {
-        position: relative;
-        width: 100%;
-        height: 40vh;
-        order: 1;
-        margin-bottom: 20px;
-    }
-
-    .historia-details {
-        padding: 0;
-        margin-left: 0;
-        order: 2;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .historia-text {
-        margin-bottom: 20px;
-        order: 1;
-    }
-
-    .historia-image {
-        width: 100%;
-        max-height: 30vh;
-        margin-top: 15px;
-        order: 2;
-    }
-
-    /* Específico para historia-origen en móvil */
-    #historia-origen .historia-text {
-        margin-bottom: 20px;
-        order: 1;
-    }
-
-    #historia-origen .historia-image {
-        width: 100%;
-        max-height: 30vh;
-        margin-top: 15px;
-        order: 2;
-    }
-
-    #historia-origen .historia-image img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        object-position: center;
-    }
-
-    .section-title {
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .section-description {
-        font-size: 0.95rem;
-        max-width: 100%;
-        text-align: left;
-        padding: 0;
-    }
-
-
-
-    .meihua-tree {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-/* General image styles */
-.historia-content {
-    background-color: #f3eee0;
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.historia-tree {
     flex: 0 0 40%;
     position: absolute;
     top: 0;
@@ -338,292 +141,7 @@
     width: calc(40% + 50px);
     overflow: hidden;
 }
-
-.meihua-tree {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left center;
-}
-
-.historia-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5% 5% 5% calc(40% + 50px);
-    margin-left: 50px;
-}
-
-.historia-image {
-    width: 100%;
-    max-height: 70vh;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.historia-image img {
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    object-position: right bottom;
-}
-
-.historia-image img:hover {
-    transform: scale(1.05);
-}
-
-.historia-text {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-
-
-/* Highlight and initial letter styles */
-.section-description .highlight {
-    color: #ff4d4f;
-    font-weight: bold;
-}
-
-.section-description .initial-letter {
-    font-size: 4rem;
-    float: left;
-    line-height: 0.8;
-    margin-right: 10px;
-    color: #ff4d4f;
-    font-weight: bold;
-}
-
-/* 传统部分的特定样式 */
-#tradicions .historia-content {
-    background-color: #f3eee0;
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-#tradicions .historia-tree {
-    flex: 0 0 40%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: calc(40% + 50px);
-    overflow: hidden;
-}
-
-#tradicions .meihua-tree {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left center;
-}
-
-#tradicions .historia-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5% 5% 5% calc(40% + 50px);
-    margin-left: 50px;
-}
-
-#tradicions .historia-text {
-    width: 100%;
-}
-
-#tradicions .section-title {
-    font-family: 'IvyOra Display', 'Georgia', serif; /* Títulos */
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-align: left;
-    font-weight: 700; /* IvyOra Display Bold */
-}
-
-#tradicions .section-description {
-    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif; /* Cuerpo de texto - Avenir Book original */
-    font-weight: 300; /* Avenir Book */
-    max-width: 800px;
-    text-align: left;
-    line-height: 1.6;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
-#tradicions .initial-letter {
-    font-size: 4rem;
-    float: left;
-    line-height: 0.8;
-    margin-right: 10px;
-    color: #435947;
-    font-weight: 300;
-}
-
-#tradicions .highlight {
-    color: #ff4d4f;
-    font-weight: bold;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    #tradicions .historia-content {
-        flex-direction: column;
-    }
-
-    #tradicions .historia-tree {
-        position: relative;
-        width: 100%;
-        height: 30vh;
-    }
-
-    #tradicions .historia-details {
-        padding: 5%;
-        margin-left: 0;
-    }
-
-    #tradicions .section-title {
-        font-size: 2rem;
-    }
-}
-
-/* 历史起源延续部分样式 */
-#historia-continuacio {
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    background-color: #f3eee0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
-}
-
-#historia-continuacio .historia-content {
-    background-color: #f3eee0;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-}
-
-#historia-continuacio .top-text,
-#historia-continuacio .middle-text,
-#historia-continuacio .bottom-text {
-    width: 100%;
-    text-align: left;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#historia-continuacio .top-text {
-    top: 5%;
-}
-
-#historia-continuacio .middle-text {
-    top: 20%;
-    text-align: right;
-}
-
-#historia-continuacio .bottom-text {
-    bottom: 5%;
-}
-
-#historia-continuacio .section-description {
-    font-size: 1.5rem; /* 增大字体大小 */
-    line-height: 1.8; /* 增加行高 */
-    color: #435947;
-    max-width: 100%;
-    margin: 0;
-    letter-spacing: 0.5px; /* 增加字母间距 */
-}
-
-#historia-continuacio .initial-letter {
-    font-size: 6rem; /* 增大首字母 */
-    float: left;
-    line-height: 0.8;
-    margin-right: 15px; /* 增加右侧间距 */
-    color: #435947;
-    font-weight: 300;
-}
-
-#historia-continuacio .historia-tree {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#historia-continuacio .meihua-tree {
-    max-width: 80%;
-    max-height: 60vh;
-    object-fit: contain;
-}
-
-/* 高亮样式 */
-#historia-continuacio .highlight-nian,
-#historia-continuacio .highlight-fort,
-#historia-continuacio .highlight-vermell,
-#historia-continuacio .highlight-proteccio,
-#historia-continuacio .highlight-prosperitat {
-    color: #ff4d4f;
-    font-weight: normal;
-}
-
-/* Mobile responsive for historia-continuacio */
-@media (max-width: 768px) {
-    #historia-continuacio {
-        padding: 20px 15px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    #historia-continuacio .historia-content {
-        height: 100%;
-        justify-content: space-between;
-        padding: 20px 0;
-    }
-
-    #historia-continuacio .top-text,
-    #historia-continuacio .middle-text,
-    #historia-continuacio .bottom-text {
-        position: relative;
-        width: 100%;
-        padding: 15px 0;
-        transform: none;
-        left: auto;
-        top: auto;
-        bottom: auto;
-    }
-
-    #historia-continuacio .section-description {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        text-align: left;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    #historia-continuacio .initial-letter {
-        font-size: 3rem;
-        margin-right: 8px;
-    }
-
-    #historia-continuacio .historia-tree {
+ .historia-tree {
         position: relative;
         width: 100%;
         height: auto;
@@ -636,223 +154,3 @@
         left: auto;
         top: auto;
     }
-
-    #historia-continuacio .meihua-tree {
-        max-width: 80%;
-        max-height: 40vh;
-        width: auto;
-        height: auto;
-    }
-
-    #historia-continuacio .top-text {
-        order: 1;
-    }
-
-    #historia-continuacio .middle-text {
-        order: 3;
-        text-align: left;
-    }
-
-    #historia-continuacio .bottom-text {
-        order: 4;
-    }
-}
-
-#celebracio {
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    background-color: #f3eee0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
-}
-
-#celebracio .historia-content {
-    background-color: #f3eee0;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-}
-
-#celebracio .top-text,
-#celebracio .middle-text,
-#celebracio .bottom-text {
-    width: 100%;
-    text-align: left;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#celebracio .top-text {
-    top: 5%;
-}
-
-#celebracio .middle-text {
-    top: 20%;
-    text-align: right;
-}
-
-#celebracio .bottom-text {
-    bottom: 5%;
-}
-
-#celebracio .section-description {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #435947;
-    max-width: 100%;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-
-#celebracio .initial-letter {
-    font-size: 6rem;
-    float: left;
-    line-height: 0.8;
-    margin-right: 15px;
-    color: #435947;
-    font-weight: 300;
-}
-
-#celebracio .historia-tree {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px; 
-}
-
-#celebracio .meihua-tree {
-    max-height: 50vh;
-    object-fit: contain;
-}
-
-#celebracio .lion-image {
-    max-width: 80%; 
-}
-
-#celebracio .women-image {
-    max-width: 35%; 
-}
-
-
-#celebracio .highlight-dansa,
-#celebracio .highlight-lleo,
-#celebracio .highlight-sobres,
-#celebracio .highlight-hongbao {
-    color: #ff4d4f;
-    font-weight: normal;
-}
-
-/* Mobile responsive for celebracio */
-
-/* 确保图像保持原始比例和清晰度 */
-#historia-origen .historia-image img,
-#tradicions .historia-image img {
-    max-width: 100%;
-    max-height: 70vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    object-position: right bottom;
-}
-
-#global-celebration {
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    background-color: #f3eee0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
-}
-
-#global-celebration .historia-content {
-    background-color: #f3eee0;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-}
-
-#global-celebration .top-text,
-#global-celebration .bottom-text {
-    width: 100%;
-    text-align: left;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#global-celebration .top-text {
-    top: 5%;
-}
-
-#global-celebration .bottom-text {
-    bottom: 5%;
-    text-align: left;
-}
-
-#global-celebration .historia-tree {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#global-celebration .final-image {
-    max-width: 90%;
-    max-height: 60vh;
-    object-fit: contain;
-}
-
-#global-celebration .section-description {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #435947;
-    max-width: 100%;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-
-#global-celebration .initial-letter {
-    font-size: 6rem;
-    float: left;
-    line-height: 0.8;
-    margin-right: 15px;
-    color: #435947;
-    font-weight: 300;
-}
-
-#global-celebration .highlight-barcelona {
-    color: #ff4d4f;
-    font-weight: normal;
-}
-
-
-
