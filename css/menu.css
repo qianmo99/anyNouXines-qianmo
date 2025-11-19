@@ -148,6 +148,7 @@
     transition: background-color 0.2s ease;
     background-color: transparent;
     position: relative;
+    white-space:nowrap; 
 }
 
 .language-selector {

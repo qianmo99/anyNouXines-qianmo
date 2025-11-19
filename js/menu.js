@@ -75,3 +75,40 @@ document.addEventListener('click', function (e) {
 
 
 initializeMenu()
+
+/* set active style*/
+var currentPageClass;
+var currentPageFileName = window.location.pathname.split('/').pop();
+var pages = [
+    {
+        pageName: 'home.html',
+        navClass: '.inici',
+    },
+    {
+        pageName: 'historia-origen.html',
+        navClass: '.dracs',
+    },
+    {
+        pageName: 'programa.html',
+        navClass: '.activitats',
+    },
+    {
+        pageName: 'galeria.html',
+        navClass: '.galeria',
+    },
+    {
+        pageName: 'qui-som.html',
+        navClass: '.quisom',
+    }
+]
+pages.forEach((element) => {
+    if (currentPageFileName == element.pageName) {
+        currentPageClass = element.navClass;
+        console.log(currentPageClass)
+    }
+});
+if (currentPageClass) {
+    const currentPage = document.querySelector(currentPageClass);
+    currentPage.classList.add('active');
+}
+

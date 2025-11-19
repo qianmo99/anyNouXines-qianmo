@@ -65,7 +65,7 @@
     overflow: hidden;
     z-index: 1;
     transition: transform var(--carousel-speed) ease, z-index var(--carousel-speed) ease, filter var(--carousel-speed) ease;
-    filter: drop-shadow(0 0 var(--carousel-shadow) rgb(0 0 0 / .25));
+    /*filter: drop-shadow(0 0 var(--carousel-shadow) rgb(0 0 0 / .25));*/
     background: #ddd center/cover no-repeat;
 }
 
@@ -79,7 +79,7 @@
     transform: translate(-50%, -50%) scale(1.25);
     /* Increased from 1.1 to make center image larger */
     z-index: 9;
-    filter: drop-shadow(0 0 calc(var(--carousel-shadow)*1.5) rgb(0 0 0 / .4));
+    /*filter: drop-shadow(0 0 calc(var(--carousel-shadow)*1.5) rgb(0 0 0 / .4));*/
 }
 
 /* Navigation buttons below images */

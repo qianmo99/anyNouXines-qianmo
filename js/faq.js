@@ -1,9 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("faq 页面 逻辑代码 已运行");
     const faqItems = document.querySelectorAll('.faq-item');
     const faqToggles = document.querySelectorAll('.faq-toggle');
-    console.log(faqItems)
 
     // Function to toggle FAQ item
     function toggleFaq(item) {

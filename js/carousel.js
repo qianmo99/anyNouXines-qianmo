@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Determinar el año y el enlace según la imagen
         const yearMap = {
-            'assets/images/2025.jpg': { year: '2025', link: 'galeria-2025.html' },
+            'assets/images/2025.jpg': { year: '2025', link: 'galeria.html' },
             'assets/images/2023.webp': { year: '2023', link: '404.html' },
             'assets/images/2022.png': { year: '2022', link: '404.html' },
             'assets/images/2021.jpeg': { year: '2021', link: '404.html' },
