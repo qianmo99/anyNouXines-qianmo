@@ -99,9 +99,6 @@ contact-btn {
 
 
 /* Add more spacing between sections */
-main>section {
-    margin-bottom: 5rem;
-}
 
 /* Additional space for info cards */
 .info-card {
@@ -212,6 +209,11 @@ main>section {
     margin: 0 80px;
 }
 
+#home-header video{
+    width: 100%;
+    height: auto;
+}
+
 
 /*table*/
 @media screen and (max-width: 1200px) {}
@@ -238,3 +240,4 @@ main>section {
         text-align: center;
     }
 }
+

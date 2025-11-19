@@ -1,0 +1,165 @@
+/* --- Main Content Styles --- */
+.main-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    background-color: var(--bg-cream);
+    padding-bottom: 0px;
+}
+
+/* Program Overview Section */
+.program-overview {
+    margin-bottom: 60px;
+}
+
+.program-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 0 0 20px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.program-meta {
+    margin-bottom: 40px;
+}
+
+.program-date,
+.program-location {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin: 5px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Event Blocks */
+.event-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.event-block {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.event-time {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-dark);
+    min-width: 120px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.event-content {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.event-image {
+    width: 428px;
+    height: 212px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #e0e0e0;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 0 0 10px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.event-description {
+    font-size: 1em;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.5;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Detailed Schedule Section */
+.detailed-schedule {
+    margin-top: 60px;
+}
+
+.schedule-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 0 0 40px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.schedule-section {
+    margin-bottom: 50px;
+}
+
+.schedule-subtitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 0 0 20px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.schedule-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+
+    font-family: "Times New Roman", Times, serif;
+}
+
+.schedule-time {
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 1em;
+}
+
+.schedule-name {
+    color: var(--text-dark);
+    font-size: 1em;
+}
+
+.schedule-performer {
+    color: var(--text-dark);
+    font-size: 0.95em;
+    font-style: italic;
+}
+
+
+.schedule-item, .event-block {
+    text-align: center;
+    border-top: 1px solid rgba(62, 87, 58, 0.2);
+    padding: 20px 0;
+}
+
+
+.schedule-item:last-child, .event-block:last-child {
+      border-bottom: 1px solid rgba(62, 87, 58, 0.2);
+}
