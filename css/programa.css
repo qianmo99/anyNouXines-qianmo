@@ -10,7 +10,7 @@
 
 /* Program Overview Section */
 .program-overview {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .program-title {
@@ -61,12 +61,13 @@
 }
 
 .event-image {
-    width: 428px;
+    max-width: 428px;
     height: 212px;
     flex-shrink: 0;
     overflow: hidden;
     border-radius: 15px;
     background-color: #e0e0e0;
+    margin-left: 50px;
 }
 
 .event-image img {
@@ -153,13 +154,32 @@
 }
 
 
-.schedule-item, .event-block {
+.schedule-item,
+.event-block {
     text-align: center;
     border-top: 1px solid rgba(62, 87, 58, 0.2);
     padding: 20px 0;
 }
 
 
-.schedule-item:last-child, .event-block:last-child {
-      border-bottom: 1px solid rgba(62, 87, 58, 0.2);
+.schedule-item:last-child,
+.event-block:last-child {
+    border-bottom: 1px solid rgba(62, 87, 58, 0.2);
+}
+
+
+/*mobile*/
+@media screen and (max-width: 950px) {
+    .event-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-image {
+        margin: 0;
+    }
+
+    .main-content {
+        padding: 60px 20px 0px 20px;
+    }
 }
