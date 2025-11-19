@@ -31,6 +31,7 @@
 }
 */
 
+@import url("menu.css");
 
 :root {
     --primary-green: #5a7860;
@@ -56,3 +57,4 @@
 #content{
     margin-top: 64px;
 }
+
