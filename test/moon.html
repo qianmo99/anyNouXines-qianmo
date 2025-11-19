@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<title>月相图片切换示例</title>
+
+<style>
+body {
+  background: #f4f1e8;
+  font-family: sans-serif;
+}
+
+/* 容器布局 */
+.moon-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+/* 每一个月相图像 */
+.moon-phase {
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+/* —— 月相形状 —— */
+
+/* 完整圆 */
+.full-moon {
+  mask: radial-gradient(circle, #000 100%);
+  -webkit-mask: radial-gradient(circle, #000 100%);
+}
+
+/* 左半圆 */
+.left-half {
+  -webkit-mask: linear-gradient(to right, #000 50%, transparent 50%);
+  mask: linear-gradient(to right, #000 50%, transparent 50%);
+}
+
+/* 右半圆 */
+.right-half {
+  -webkit-mask: linear-gradient(to left, #000 50%, transparent 50%);
+  mask: linear-gradient(to left, #000 50%, transparent 50%);
+}
+
+/* 左弦月 */
+.left-crescent {
+  -webkit-mask: radial-gradient(circle at 60% 50%, transparent 45%, #000 46%);
+  mask: radial-gradient(circle at 60% 50%, transparent 45%, #000 46%);
+}
+
+/* 右弦月 */
+.right-crescent {
+  -webkit-mask: radial-gradient(circle at 40% 50%, transparent 45%, #000 46%);
+  mask: radial-gradient(circle at 40% 50%, transparent 45%, #000 46%);
+}
+
+/* 左右切换按钮 */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background: white;
+  border: 2px solid #bbb;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+.nav-btn:hover {
+  background: #eee;
+}
+.left-btn { left: 20px; }
+.right-btn { right: 20px; }
+</style>
+
+</head>
+<body>
+
+<div class="moon-container">
+
+  <button class="nav-btn left-btn">←</button>
+
+  <!-- 五个不同月相形状 -->
+  <div class="moon-phase left-crescent"></div>
+  <div class="moon-phase left-half"></div>
+  <div class="moon-phase full-moon"></div>
+  <div class="moon-phase right-half"></div>
+  <div class="moon-phase right-crescent"></div>
+
+  <button class="nav-btn right-btn">→</button>
+
+</div>
+
+<script>
+// 你可以在这里换成任何图片（目前用你上传的图）
+const images = [
+  "https://www.w3schools.com/TAgs/img_girl.jpg",
+
+];
+
+let index = 0;
+
+// 更新 5 个月相背景
+function updateMoonImages() {
+  document.querySelectorAll(".moon-phase").forEach(el => {
+    el.style.backgroundImage = `url(${images[index]})`;
+  });
+}
+
+updateMoonImages();
+
+// 左右按钮
+document.querySelector(".left-btn").onclick = () => {
+  index = (index - 1 + images.length) % images.length;
+  updateMoonImages();
+};
+
+document.querySelector(".right-btn").onclick = () => {
+  index = (index + 1) % images.length;
+  updateMoonImages();
+};
+</script>
+
+</body>
+</html>
