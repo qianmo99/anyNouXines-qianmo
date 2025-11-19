@@ -129,7 +129,7 @@
 }
 
 .dots {
-    display: flex;
+    display: none;
     gap: 8px;
     justify-content: center;
     margin-top: 20px;

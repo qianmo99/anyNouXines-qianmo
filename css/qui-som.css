@@ -1,0 +1,289 @@
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 120px 5% 50px 5%;
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ .impulsors-section {
+     margin-bottom: 40px;
+     text-align: center;
+ }
+
+ .impulsors-section h1 {
+     font-size: 36px;
+     margin-bottom: 2rem;
+     color: #435947;
+     text-transform: uppercase;
+     display: inline-block;
+ }
+
+ .impulsors-content {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 2rem;
+     background-color: transparent;
+     padding: 0;
+     border-radius: 0;
+     margin-bottom: 2rem;
+ }
+
+ .impulsors-content p {
+     margin: 0;
+     line-height: 1.6;
+     text-align: justify;
+ }
+
+ .impulsors-gallery {
+     background-color: #E0E0E0;
+     margin-bottom: 2rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     max-width: 100%;
+ }
+
+ .impulsors-gallery img {
+     max-width: 100%;
+     max-height: 500px;
+     object-fit: cover;
+     width: 100%;
+ }
+
+ /* Eliminando estilos duplicados del formulario de contacto */
+ /* Los estilos del formulario ahora están en contact-form.css */
+
+ .sponsors-section {
+     max-width: 1200px;
+     margin: 3rem auto;
+     padding: 0 5%;
+ }
+
+ .sponsors-section h3 {
+     text-align: center;
+     text-transform: uppercase;
+     margin-bottom: 2rem;
+     font-size: 24px;
+ }
+
+ .sponsors-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 1.5rem;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .sponsors-grid .sponsor-category {
+     display: contents;
+ }
+
+ .sponsors-grid .sponsor-logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 1rem;
+     background-color: #f5f5f5;
+     border-radius: 8px;
+     transition: transform 0.3s ease;
+ }
+
+ .sponsors-grid .sponsor-logo img {
+     max-width: 100%;
+     max-height: 80px;
+     object-fit: contain;
+ }
+
+ .sponsors-grid .sponsor-logo:hover {
+     transform: scale(1.05);
+ }
+
+ .more-info-button {
+     display: block;
+     width: fit-content;
+     margin: 2rem auto 0;
+     padding: 0.75rem 1.5rem;
+     background-color: #FF6347;
+     color: white;
+     text-decoration: none;
+     border-radius: 4px;
+     text-transform: uppercase;
+     transition: background-color 0.3s ease;
+ }
+
+ .more-info-button:hover {
+     background-color: #FF4500;
+ }
+
+ /* 响应式媒体查�?*/
+ @media screen and (max-width: 1024px) {
+     .container {
+         padding: 100px 4% 30px 4%;
+     }
+ }
+
+ @media screen and (max-width: 768px) {
+     .container {
+         padding: 90px 3% 20px 3%;
+     }
+
+     .impulsors-content {
+         grid-template-columns: 1fr;
+         gap: 1rem;
+     }
+
+     .impulsors-section h1 {
+         font-size: 28px;
+     }
+
+     .sponsors-section {
+         padding: 0 3%;
+     }
+ }
+
+ @media screen and (max-width: 480px) {
+     .container {
+         padding: 80px 2% 15px 2%;
+     }
+
+     .impulsors-section h1 {
+         font-size: 24px;
+     }
+
+     .sponsors-grid {
+         grid-template-columns: repeat(2, 1fr);
+     }
+ }
+
+
+ /* Contact form styles */
+.contact {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    background-color: #f3eee0;
+}
+
+.contact h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #3e573a;
+    text-align: left;
+    font-weight: 500;
+    padding-left: 5%;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+/* Información de contacto a la izquierda */
+.contact-info {
+    width: 40%;
+    padding: 0;
+    text-align: left;
+}
+
+.contact-info-group {
+    margin-bottom: 2.5rem;
+}
+
+.contact-info-group p {
+    margin: 0;
+    line-height: 1.5;
+    color: #435947;
+}
+
+.contact-info-group strong {
+    color: #3e573a;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Formulario a la derecha */
+.contact-form-wrapper {
+    width: 60%;
+    padding: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #3e573a;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    background-color: transparent;
+    outline: none;
+    color: #435947;
+    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif; /* Body text */
+    font-weight: 300; /* Avenir Book */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #435947;
+    opacity: 1;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #e25a41;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, 
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+    }
+}
