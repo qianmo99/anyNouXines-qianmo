@@ -188,7 +188,7 @@
 }
 
 /* Información de contacto a la izquierda */
-.contact-info {
+.contact-info-box {
     width: 40%;
     padding: 0;
     text-align: left;
@@ -278,7 +278,7 @@
         flex-direction: column;
     }
 
-    .contact-info, 
+    .contact-info-box, 
     .contact-form-wrapper {
         width: 100%;
     }
