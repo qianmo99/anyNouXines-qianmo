@@ -1,24 +1,23 @@
-/* --- 默认：桌面版（>=900px）为横向滚动 --- */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
     height: 100vh;
     scroll-behavior: smooth;
-    padding-top: 64px; /* 顶部预留导航栏空间 */
+    padding-top: 54px;
+    scrollbar-width: none;
 }
-
+body::-webkit-scrollbar { display: none; }
 .container {
     display: flex;
     flex-direction: row;
     width: 400vw;
-    height: calc(100vh - 64px); /* 减去顶部导航栏高度 */
+    height: calc(100vh - 54px);
 }
-
 .scroll-section {
     width: 100vw;
-    height: calc(100vh - 64px); /* 同步减少高度 */
+    height: calc(100vh - 54px);
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -29,73 +28,33 @@ body {
     transform: translateX(60px);
     transition: all 0.8s ease-out;
 }
+.fade-in.visible { opacity: 1; transform: translateX(0); }
+.nav-buttons { position: fixed; bottom: 20px; right: 20px; display: flex; gap: 10px; }
+button { padding: 10px 18px; border-radius: 6px; border: none; background: #007bff; color: white; cursor: pointer; }
+button.disabled { background: #ccc; cursor: not-allowed; }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* 导航按钮（桌面显示） */
-.nav-buttons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-button {
-    padding: 10px 18px;
-    border-radius: 6px;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-button.disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-/* --- 移动端：宽度 <900px 时切换成纵向滚动 --- */
+/* 移动端宽度 <900px，纵向滚动 */
 @media (max-width: 900px) {
-   
+    body { overflow-x: hidden; overflow-y: scroll; height: auto; }
+    .container { display: block; width: 100%; height: auto; }
+    .scroll-section { width: 100%; height: calc(100vh - 54px); transform: translateY(60px); }
+    .fade-in.visible { transform: translateY(0); }
+    .nav-buttons { display: none; }
 }
-
-/* 顶部导航栏 */
 .top-nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 64px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    gap: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 999;
+    top: 0; left: 0; width: 100%; height: 54px;
+    background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+    display: flex; align-items: center; padding: 0 20px; gap: 20px; font-size: 18px; font-weight: bold; z-index: 999;
 }
-.top-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: normal;
-}
-.top-nav a:hover {
-    color: #007bff;
-}
+.top-nav a { text-decoration: none; color: #333; font-weight: normal; }
+.top-nav a:hover { color: #007bff; }
 
 
-
+/* section css */
 ::-webkit-scrollbar {
     display: none;
 }
-
-/* section css */
 .scroll-section {
     box-sizing: border-box;
     border: 1px solid #333;
