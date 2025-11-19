@@ -60,33 +60,7 @@ button.disabled {
 
 /* --- 移动端：宽度 <900px 时切换成纵向滚动 --- */
 @media (max-width: 900px) {
-    body {
-        overflow-x: hidden;
-        overflow-y: scroll;
-        height: auto;
-        padding-top: 64px;
-    }
-
-    .container {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .scroll-section {
-        width: 100vw;
-        height: calc(100vh - 64px); /* 移动端同样减少高度 */
-        transform: translateY(60px);
-    }
-
-    .fade-in.visible {
-        transform: translateY(0);
-    }
-
-    /* 移动端不显示左右按钮 */
-    .nav-buttons {
-        display: none;
-    }
+   
 }
 
 /* 顶部导航栏 */
