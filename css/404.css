@@ -20,7 +20,7 @@
     font-size: 15rem;
     font-weight: 300;
     color: #435947;
-    margin-bottom: 0;
+    margin: 0;
     line-height: 1;
     letter-spacing: -10px;
 }
@@ -29,6 +29,7 @@
     font-size: 1.2rem;
     color: #435947;
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .btn-tornar-inici {
@@ -55,12 +56,12 @@
 }
 
 .error-code {
-    font-size: 8rem;
+    font-size: 200px;
     letter-spacing: -5px;
 }
 
 .error-message {
-    font-size: 1rem;
+    font-size: 15px;
 }
 
 
