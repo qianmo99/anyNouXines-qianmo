@@ -52,25 +52,35 @@
                         <form class="contact-form">
                             <div class="form-group">
                                 <input type="text" id="nom" name="nom" placeholder="Nom i Cognom" required>
+                                <span class="error-info">
+                                    Camps obligatoris incomplets. Si us plau, revisa-ho.
+                                </span>
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" name="email" placeholder="Correu electrònic" required>
+                                <span class="error-info">
+                                    Camps obligatoris incomplets. Si us plau, revisa-ho.
+                                </span>
                             </div>
                             <div class="form-group">
                                 <textarea id="missatge" name="missatge" placeholder="Missatge" required></textarea>
+                                <span class="error-info">
+                                    Camps obligatoris incomplets. Si us plau, revisa-ho.
+                                </span>
                             </div>
                             <button class="submint-button" type="submit">
                                 <a class="main-button">Enviar</a></button>
                         </form>
                     </div>
                 </div>
-                
+
             </section>
         </div>
     </div>
     <div id="footerContainer">
         <!-- meun会加载到这里 -->
     </div>
+    <script src="js/qui-som.js"></script>
     <script src="js/loadMenu.js"></script>
     <script src="js/loadFooter.js"></script>
 </body>
