@@ -150,10 +150,11 @@ button.disabled {
     max-height: 100px;
     overflow: hidden;
 }
+
 @media (max-width: 950px) {
-   .section-description {
-    font-size: 1.2rem
-} 
+    .section-description {
+        font-size: 1.2rem
+    }
 }
 
 /*-------------- page1 -------------*/
@@ -249,7 +250,7 @@ button.disabled {
         margin-top: 0;
         left: 0;
         display: flex;
-        justify-content: center;
+        /*justify-content: center;*/
 
     }
 
@@ -345,12 +346,15 @@ button.disabled {
 
 /* Mobile responsive for historia-continuacio */
 @media (max-width: 950px) {
+    .scroll-section {
+        height:auto;
+    }
+
     #historia-continuacio {
         padding: 20px 15px;
-        min-height: 100vh;
+        /*min-height: 100vh;*/
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     #historia-continuacio .historia-content {
@@ -599,7 +603,7 @@ button.disabled {
 #global-celebration {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: #f3eee0;
     display: flex;
     justify-content: center;
