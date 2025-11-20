@@ -165,6 +165,7 @@ contact-btn {
     transition: background-color 0.3s ease;
     box-shadow: 0px 0px 16px 3px #EEB7A7D9;
     align-content: center;
+    align-self: flex-end;
 }
 
 .info-button:hover {
