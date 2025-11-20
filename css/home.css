@@ -232,6 +232,10 @@ contact-btn {
         flex-direction: column-reverse;
     }
 
+    .info-button{
+        align-self: center;
+    }
+
     .info-text {
         align-items: center;
         text-align: center;
