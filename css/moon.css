@@ -20,6 +20,7 @@
     /* 添加淡入动画 */
     opacity: 1;
     transition: opacity 0.5s ease;
+    transition: -webkit-mask 5s ease;
 }
 
 /* 添加背景颜色蒙版 */
@@ -33,7 +34,7 @@
 
 /* 月亮形状 */
 .left-crescent {
-    -webkit-mask: radial-gradient(circle at 100% 50%, transparent 45%, #000 45%);
+    -webkit-mask: radial-gradient(circle at 90% 50%, transparent 45%, #000 45%);
 }
 
 .left-half {
@@ -57,7 +58,7 @@
 }
 
 .right-crescent {
-    -webkit-mask: radial-gradient(circle at 20% 50%, transparent 45%, #000 45%);
+    -webkit-mask: radial-gradient(circle at 10% 50%, transparent 45%, #000 45%);
 }
 
 
