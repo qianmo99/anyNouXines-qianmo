@@ -18,13 +18,14 @@ body::-webkit-scrollbar {
     flex-direction: row;
     width: 400vw;
     height: calc(100vh - 64px);
+    align-items: center;
+    background-image: url("../assets/images/background_history.jpg");
 }
 
 .scroll-section {
     width: 100vw;
-    height: calc(100vh - 64px);
+    height: calc(100vh - 164px);
     flex-shrink: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     /*background: white;*/
@@ -32,6 +33,7 @@ body::-webkit-scrollbar {
     transform: translateX(60px);
     transition: all 0.8s ease-out;
     overflow: hidden;
+    background-color: #f3eee0;
 }
 
 .fade-in.visible {
@@ -233,7 +235,7 @@ button.disabled {
 #historia-origen .historia-image img,
 #tradicions .historia-image img {
     max-width: 100%;
-    max-height: 50vh;
+    max-height: 40vh;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -330,7 +332,7 @@ button.disabled {
 
 #historia-continuacio .meihua-tree {
     max-width: 60%;
-    max-height: 60vh;
+    max-height: 35vh;
     object-fit: contain;
 }
 
@@ -484,7 +486,7 @@ button.disabled {
 }
 
 #celebracio .meihua-tree {
-    max-height: 50vh;
+    max-height: 45vh;
     object-fit: contain;
 }
 
@@ -639,7 +641,7 @@ button.disabled {
 
 #global-celebration .final-image {
     max-width: 90%;
-    max-height: 60vh;
+    max-height: 50vh;
     object-fit: contain;
 }
 

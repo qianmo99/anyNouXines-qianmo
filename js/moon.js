@@ -15,13 +15,13 @@ function refreshDisplay() {
     moons.forEach((el, i) => {
         el.style.opacity = 0;   // 先淡出
     });
-
+    moons.forEach((el, i) => {
+        el.style.backgroundImage = `url(${images[i]})`;
+        el.style.opacity = 1;  // 淡入
+    });
     setTimeout(() => {
-        moons.forEach((el, i) => {
-            el.style.backgroundImage = `url(${ images[i]})`;
-            el.style.opacity = 1;  // 淡入
-        });
-    }, 100); // 300ms 后换图，再用 CSS 淡入
+
+    }, 1); // 300ms 后换图，再用 CSS 淡入
 }
 
 /* 初始化 */
@@ -40,7 +40,7 @@ document.querySelector(".left-btn").onclick = () => {
 };
 
 /* 自动轮播，每 3 秒切换一次 */
-/*setInterval(() => {
+setInterval(() => {
     images.push(images.shift()); // 左移一位
     refreshDisplay();
-}, 10000);*/
+}, 10000);
