@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (isValid) {
-            console.log('Formulari enviat:', { nom, email, missatge });
-
+            //console.log('Formulari enviat:', { nom, email, missatge });
+            document.getElementById('success-popup').style.display = 'flex';
             // Show success message
             //alert('Gràcies per contactar amb nosaltres. Aviat ens posarem en contacte.');
             // Reset form
@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Here you can add actual form submission logic, e.g., sending to a server
 
+    });
+
+
+    // 关闭按钮
+    document.querySelector('.close-popup').addEventListener('click', function () {
+        document.getElementById('success-popup').style.display = 'none';
     });
 
     // "Veure més" button interaction
