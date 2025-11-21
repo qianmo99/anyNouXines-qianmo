@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Scroll - 4 Sections</title>
+    <style>
+/* --- 默认：桌面版（>=900px）为横向滚动 --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100vh;
+    scroll-behavior: smooth;
+    padding-top: 54px; /* 顶部预留导航栏空间 */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    height: calc(100vh - 54px); /* 减去顶部导航栏高度 */
+}
+
+.scroll-section {
+    width: 100vw;
+    height: calc(100vh - 54px); /* 同步减少高度 */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: white;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 导航按钮（桌面显示） */
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- 移动端：宽度 <900px 时切换成纵向滚动 --- */
+@media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: auto;
+        padding-top: 54px;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .scroll-section {
+        width: 100vw;
+        height: calc(100vh - 54px); /* 移动端同样减少高度 */
+        transform: translateY(60px);
+    }
+
+    .fade-in.visible {
+        transform: translateY(0);
+    }
+
+    /* 移动端不显示左右按钮 */
+    .nav-buttons {
+        display: none;
+    }
+}
+
+/* 顶部导航栏 */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 999;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+.top-nav a:hover {
+    color: #007bff;
+}
+
+
+.scroll-section {
+    border: 1px solid #333;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+</style>
+</head>
+<body>
+
+    <!-- 顶部导航栏（高度 54px） -->
+    <div class="top-nav">
+    <a href="#section1">Section 1</a>
+    <a href="#section2">Section 2</a>
+    <a href="#section3">Section 3</a>
+    <a href="#section4">Section 4</a>
+</div>
+
+    <div class="container">
+        <section class="scroll-section fade-in" id="section1">Section 1</section>
+        <section class="scroll-section fade-in" id="section2">Section 2</section>
+        <section class="scroll-section fade-in" id="section3">Section 3</section>
+        <section class="scroll-section fade-in" id="section4">Section 4</section>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="prev-section">Previous</button>
+        <button class="next-section">Next</button>
+    </div>
+
+<script>
+// Fade-in animations
+const observerOptions = {
+    threshold: 0.3
+};
+
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// Horizontal navigation
+window.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.scroll-section');
+    const prevBtn = document.querySelector('.prev-section');
+    const nextBtn = document.querySelector('.next-section');
+    let currentIndex = 0;
+
+    function updateNav() {
+        prevBtn.classList.toggle('disabled', currentIndex === 0);
+        nextBtn.classList.toggle('disabled', currentIndex === sections.length - 1);
+    }
+
+    function goTo(index) {
+        if (index >= 0 && index < sections.length) {
+            window.scrollTo({ left: index * window.innerWidth, behavior: 'smooth' });
+            currentIndex = index;
+            updateNav();
+        }
+    }
+
+    prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+    updateNav();
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                currentIndex = [...sections].indexOf(e.target);
+                updateNav();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(sec => sectionObserver.observe(sec));
+});
+</script>
+</body>
+</html>

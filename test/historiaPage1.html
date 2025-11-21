@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Scroll - 4 Sections</title>
+    <style>
+        body {
+            margin: 0;
+
+        }
+
+        .scroll-section {
+            min-width: 100%;
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: stretch;
+            position: relative;
+            /* Space for back button */
+        }
+
+        /* -----------------------------------*/
+
+        .historia-content {
+            background-color: #f3eee0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .historia-tree {
+            flex: 0 0 40%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 400px;
+            overflow: hidden;
+        }
+
+        .meihua-tree {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left center;
+        }
+
+        .historia-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 5% 5% 5% 500px;
+        }
+
+        .historia-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .historia-text {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        /* #historia-origen */
+
+        .historia-text {
+            margin-bottom: 20px;
+            order: 1;
+        }
+
+        #historia-origen{
+            width: 100%;
+            height: 100%;
+        }
+        #historia-origen .historia-image {
+            width: 100%;
+            max-height: 30vh;
+            margin-top: 15px;
+            position: absolute;
+            max-height: 100%;
+            max-width: 100%;
+            bottom: 0;
+            left: 300px;
+
+        }
+
+        #historia-origen .historia-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        #historia-origen .historia-image img,
+        #tradicions .historia-image img {
+            max-width: 100%;
+            max-height: 50vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            object-position: right bottom;
+        }
+
+        .historia-content {
+            background-color: #f3eee0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 950px) {
+            .historia-tree {
+                display: none;
+            }
+
+            #historia-origen .historia-image {
+                position: relative;
+                margin-top: 0;
+                left: 0;
+
+            }
+            .historia-details {
+                padding: 5%;
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section  class="scroll-section">
+        <div id="historia-origen" class="historia-content">
+            <div class="historia-tree fade-in">
+                <img src="../assets/images/any.xines/meihua.gif" alt="Arbre de Meihua" class="meihua-tree">
+            </div>
+            <div class="historia-details">
+                <div class="historia-text fade-in">
+                    <h1 class="section-title">Història i Origen</h1>
+                    <p class="section-description">
+                        L'Any Nou Xinès és la festivitat més important del calendari lunar xinès, amb més de
+                        quatre
+                        mil anys d'història.
+                    </p>
+                    <p class="section-description">
+                        Marca l'inici de la primavera i és un moment de renovació, retrobament familiar i bons
+                        desitjos.
+                    </p>
+                </div>
+                <div class="historia-image fade-in">
+                    <img src="../assets/images/any.xines/dryxt.gif" alt="Nens tradicionals xinesos"
+                        class="tradicio-image">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

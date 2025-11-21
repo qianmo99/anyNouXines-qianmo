@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/moon.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -76,21 +77,25 @@
 
             <section class="moments-section">
                 <h1>MOMENTS DE L'ANY NOU XINÈS</h1>
-                <div class="carousel" aria-roledescription="carousel" aria-label="Moments de l'Any Nou Xinès">
-                    <div class="track" id="track" role="list"></div>
+
+                <div class="moon-container">
+                    <div class="moon-phase left-crescent"></div>
+                    <div class="moon-phase left-half"></div>
+                    <div class="moon-phase full-moon"></div>
+                    <div class="moon-phase right-half"></div>
+                    <div class="moon-phase right-crescent"></div>
 
                     <div class="controls" aria-hidden="true">
-                        <button class="btn prev" title="Anterior" aria-label="Anterior">
-                            <img src="assets/images/button/arrow left.svg" alt="Anterior" class="arrow-icon">
+                        <button class="btn  left-btn" title="Anterior" aria-label="Anterior">
+                            <img src="../assets/images/button/arrow left.svg" alt="Anterior" class="arrow-icon">
                         </button>
-                        <button class="btn next" title="Següent" aria-label="Següent">
-                            <img src="assets/images/button/arrow right.svg" alt="Següent" class="arrow-icon">
+                        <button class="btn right-btn" title="Següent" aria-label="Següent">
+                            <img src="../assets/images/button/arrow right.svg" alt="Següent" class="arrow-icon">
                         </button>
                     </div>
-
-                    <div class="dots" id="dots" aria-label="Indicadors"></div>
-                    <p class="visually-hidden" id="sr-status" aria-live="polite"></p>
                 </div>
+
+
 
             </section>
 
@@ -164,6 +169,7 @@
             <!-- meun会加载到这里 -->
         </div>
     </div>
+    <script src="js/moon.js"></script>
     <script src="js/home.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/carousel.js"></script>

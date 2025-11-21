@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Scroll - 4 Sections</title>
+    <style>
+        body {
+            margin: 0;
+
+        }
+
+        .scroll-section {
+            min-width: 100%;
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: stretch;
+            position: relative;
+            /* Space for back button */
+        }
+
+        /* -----------------------------------*/
+
+        #celebracio {
+            background-color: #f3eee0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px;
+        }
+
+        #celebracio .historia-content {
+            background-color: #f3eee0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #celebracio .top-text,
+        #celebracio .middle-text,
+        #celebracio .bottom-text {
+            width: 100%;
+            text-align: left;
+        }
+
+        #celebracio .top-text {
+           
+        }
+
+        #celebracio .middle-text {
+           
+        }
+
+        #celebracio .bottom-text {
+           
+        }
+
+        #celebracio .section-description {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #435947;
+            max-width: 100%;
+            margin: 0;
+            word-spacing: 0.5px;
+        }
+
+        /*
+        #celebracio .initial-letter {
+            font-size: 6rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 15px;
+            color: #435947;
+            font-weight: 300;
+        }
+        */
+
+        #celebracio .historia-tree {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        #celebracio .meihua-tree {
+            max-height: 50vh;
+            object-fit: contain;
+        }
+
+        #celebracio .lion-image {
+            max-width: 80%;
+        }
+
+        #celebracio .women-image {
+            max-width: 35%;
+        }
+
+
+        #celebracio .highlight-dansa,
+        #celebracio .highlight-lleo,
+        #celebracio .highlight-sobres,
+        #celebracio .highlight-hongbao {
+            color: #ff4d4f;
+            font-weight: normal;
+        }
+
+        /* Mobile responsive for celebracio */
+        @media (max-width: 768px) {
+            #celebracio {
+                padding: 20px 15px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            #celebracio .historia-content {
+                height: auto;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px 0;
+            }
+
+            #celebracio .top-text {
+                order: 1;
+                margin-bottom: 15px;
+            }
+
+            #celebracio .middle-text {
+                order: 2;
+                margin-bottom: 20px;
+            }
+
+            #celebracio .historia-tree {
+                order: 3;
+                position: relative;
+                width: 100%;
+                height: auto;
+                margin: 25px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                transform: none;
+                left: auto;
+                top: auto;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            #celebracio .bottom-text {
+                order: 4;
+                margin-top: 15px;
+            }
+
+            #celebracio .top-text,
+            #celebracio .middle-text,
+            #celebracio .bottom-text {
+                position: relative;
+                width: 100%;
+                padding: 0;
+                transform: none;
+                left: auto;
+                top: auto;
+                bottom: auto;
+            }
+
+            #celebracio .section-description {
+                font-size: 1rem;
+                line-height: 1.6;
+                text-align: left;
+                max-width: 100%;
+                margin: 0;
+                padding: 0 10px;
+            }
+
+            /*
+            #celebracio .initial-letter {
+                font-size: 2.5rem;
+                margin-right: 8px;
+                line-height: 1;
+            }
+            */
+
+            #celebracio .lion-image {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+            }
+
+            #celebracio .women-image {
+                max-width: 40%;
+                max-height: 18vh;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="scroll-section">
+        <div id="celebracio">
+            <div class="historia-content">
+                <div class="top-text fade-in">
+                    <p class="section-description">
+                        <span class="initial-letter">A</span> més de la seva llegenda, l'Any Nou Xinès ha
+                        evolucionat
+                        fins a convertir-se
+                        en una celebració plena de rituals i traditions:
+                    </p>
+                </div>
+
+                <div class="middle-text fade-in">
+                    <p class="section-description">
+                        des de la <span class="highlight-dansa">dansa del drac</span>
+                        i del <span class="highlight-lleo">lleó</span>,
+                    </p>
+                </div>
+
+                <div class="historia-tree fade-in">
+                    <img src="../assets/images/any.xines/lion.png" alt="Dansa del Lleó" class="meihua-tree lion-image">
+                    <img src="../assets/images/any.xines/dos mujeres.png" alt="Dones en celebració"
+                        class="meihua-tree women-image">
+                </div>
+
+                <div class="bottom-text fade-in">
+                    <p class="section-description">
+                        fins reunions familiars, les decoracions vermelles i els famosos
+                        <span class="highlight-sobres">sobres amb diners</span>
+                        (<span class="highlight-hongbao">hóngbāo 红包</span>),
+                        que desitgen sort i felicitat per al nou any.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
