@@ -1,5 +1,6 @@
 /* Gallery Styles */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -44,7 +45,8 @@ body, html {
     max-width: 1000px;
     margin: 0 auto;
 }
-.gallery-header img{
+
+.gallery-header img {
     width: 100%;
 }
 
@@ -52,8 +54,10 @@ body, html {
     color: #3e573a;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    font-family: 'IvyOra Display', 'Georgia', serif; /* Titles - Original IvyOra Bold */
-    font-weight: 700; /* IvyOra Display Bold */
+    font-family: 'IvyOra Display', 'Georgia', serif;
+    /* Titles - Original IvyOra Bold */
+    font-weight: 700;
+    /* IvyOra Display Bold */
     transform: translateY(-20px);
     transition: opacity 0.5s, transform 0.5s;
 }
@@ -63,11 +67,37 @@ body, html {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 30px;
-    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif; /* Body text - Original Avenir Book */
-    font-weight: 300; /* Avenir Book */
+    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+    /* Body text - Original Avenir Book */
+    font-weight: 300;
+    /* Avenir Book */
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.gallery-item-description {
+    background: linear-gradient(0deg, rgba(186, 214, 191, 1) 0%, rgba(255, 255, 255, 0) 70%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.gallery-item-description h3 {
+    margin: 0 20px 0 20px;
+}
+
+.gallery-item-description p {
+    margin: 5px 20px 30px 20px;
+}
+
+.gallery-item:hover .gallery-item-description {
+    display: flex;
 }
 
 .gallery-container .gallery-item {
@@ -78,14 +108,14 @@ body, html {
     transition: all 0.3s ease;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     display: inline-block;
     width: 100%;
 }
 
 .gallery-container .gallery-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-container img {
@@ -107,7 +137,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0, 0, 0, 0.95);
     display: none;
     justify-content: center;
     align-items: center;
@@ -128,8 +158,8 @@ body, html {
     position: relative;
     border-radius: 12px;
     overflow: visible;
-    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-    background-color: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 15px;
     margin-top: 40px;
 }
@@ -167,15 +197,15 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-    background-color: rgba(255,255,255,0.25);
+    background-color: rgba(255, 255, 255, 0.25);
     transform: scale(1.1);
 }
 
