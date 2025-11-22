@@ -157,6 +157,9 @@ button.disabled {
     .section-description {
         font-size: 1.2rem
     }
+    .container{
+        background-image: none;
+    }
 }
 
 /*-------------- page1 -------------*/

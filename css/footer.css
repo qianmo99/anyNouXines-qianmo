@@ -107,7 +107,8 @@
     width: 100%;
     min-height: calc(642px - 50px);
     box-sizing: border-box;
-    padding: 50px 80px 0;
+    padding: 30px 80px;
+    align-items: end;
 }
 
 /* 左侧列的样式 */
@@ -291,7 +292,7 @@
     .footer-content {
         flex-direction: column;
         /* 小屏幕堆叠 */
-        padding: 0 20px 30px;
+        padding: 0px 30px;
     }
 
     .column-right {
