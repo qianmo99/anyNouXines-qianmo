@@ -315,5 +315,9 @@
         justify-content: flex-start;
     }
 
+    .section-row .section {
+        min-width: 120px !important;
+    }
+
 
 }
