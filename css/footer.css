@@ -299,6 +299,11 @@
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: #435947;
+}
+
 /* 媒体查询：适配小屏幕 */
 @media (max-width: 768px) {
     .footer-content {
