@@ -86,9 +86,9 @@
     text-transform: uppercase;
     font-family: 'Avenir';
     /* Titles */
-    font-weight: 700;
+    font-weight: 300;
     /* Playfair Display Bold */
-    font-size: 0.9rem;
+    font-size:1rem;
     letter-spacing: 1px;
     padding: 8px 0;
     transition: color 0.2s ease;
@@ -165,8 +165,8 @@
     color: #435947;
     font-family: 'Avenir';
     /* Igual que .nav-link */
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 300;
     text-transform: uppercase;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -224,7 +224,7 @@
     text-decoration: none !important;
     display: block;
     transition: background-color 0.3s ease;
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
@@ -350,6 +350,15 @@
     }
 }
 /*mobile*/
+@media (min-width: 950px) {
+    .nav-link{
+        font-weight: bold;
+    }
+    .language-selector .lang-current{
+        font-weight: bold;
+    }
+  /* … */
+}
 @media screen and (max-width: 950px) {
     .nav-wrapper {
         position: absolute;

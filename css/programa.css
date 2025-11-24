@@ -101,7 +101,7 @@
 }
 
 .event-description {
-    font-size: 1em;
+
     color: var(--text-dark);
     margin: 0;
     line-height: 1.5;
@@ -231,6 +231,24 @@
     .schedule-details {
         grid-template-columns: 1fr !important;
 
+    }
+
+    .program-title {
+        font-size: 46px;
+    }
+
+    .program-date,
+    .program-location {
+        font-size: 20px;
+    }
+    .event-title {
+         font-size: 25px;
+    }
+    .schedule-list, .event-block{
+        font-size: 1rem;
+    }
+    .event-block {
+        gap: 0px;
     }
 }
 
