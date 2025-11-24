@@ -4,12 +4,30 @@
     font-family: 'IvyOra Display';
     src: url('../assets/typography/IvyOra display-20250901T000910Z-1-001/IvyOra display/IvyOraDisplay-Bold.ttf') format('truetype');
     font-weight: 700;
-    font-style: normal;
+    font-style: Bold;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Avenir';
+    font-family: 'IvyOra Display Medium';
+    src: url('../assets/typography/IvyOra display-20250901T000910Z-1-001/IvyOra display/IvyOraDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: Medium;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display Medium';
+    src: url('../assets/typography/IvyOra display-20250901T000910Z-1-001/IvyOra display/IvyOraDisplay-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Avenir Book';
     src: url('../assets/typography/Avenir-20250901T000905Z-1-001/Avenir/AvenirLTStd-Book.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
@@ -20,9 +38,18 @@
     font-family: 'Avenir';
     src: url('../assets/typography/Avenir-20250901T000905Z-1-001/Avenir/AvenirLTStd-Medium.otf') format('opentype');
     font-weight: 500;
+    font-style: Medium;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/typography/Avenir-20250901T000905Z-1-001/Avenir/AvenirLight.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
+
 /* 
 @font-face {
     font-family: 'MyWebFont';
@@ -38,21 +65,25 @@
     --white: #ffffff;
     --text-color: #435947;
     --transition: all 0.3s ease;
-    --title-font: 'IvyOra Display', 'Georgia', serif; /* Original IvyOra Bold */
-    --body-font: 'Avenir', 'Helvetica Neue', Arial, sans-serif; /* Original Avenir Book */
+    --title-font: 'IvyOra Display', 'Georgia', serif;
+    /* Original IvyOra Bold */
+    --body-font: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+    /* Original Avenir Book */
 }
 
- body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: var(--body-font);
-    font-weight: 300; /* Avenir Book */
+    font-weight: 300;
+    /* Avenir Book */
     color: #435947;
     /* Background color is now defined in fixes.css */
     background-color: #f3eee0 !important;
 }
 
-#content{
+#content {
     margin-top: 64px;
 }
 

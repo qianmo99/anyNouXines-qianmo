@@ -6,6 +6,7 @@
     box-sizing: border-box;
     background-color: var(--bg-cream);
     padding-bottom: 0px;
+
 }
 
 /* Program Overview Section */
@@ -14,11 +15,14 @@
 }
 
 .program-title {
-    font-size: 3em;
-    font-weight: bold;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 100%;
     color: var(--text-dark);
     margin: 0 0 20px 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'IvyOra Display Medium';
+    font-style: Medium;
+    color: #2F352A;
 }
 
 .program-meta {
@@ -27,10 +31,13 @@
 
 .program-date,
 .program-location {
-    font-size: 1.1em;
+    font-size: 40px;
     color: var(--text-dark);
     margin: 5px 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'IvyOra Display Medium';
+    color: #2F352A;
+    ;
+
 }
 
 /* Event Blocks */
@@ -47,10 +54,11 @@
 
 .event-time {
     font-size: 1.1em;
-    font-weight: bold;
     color: var(--text-dark);
     min-width: 120px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'IvyOra Display Medium';
+    font-style: Medium;
+    color: #435947;
     text-align: center;
 }
 
@@ -81,11 +89,15 @@
 }
 
 .event-title {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: var(--text-dark);
-    margin: 0 0 10px 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'IvyOra Display Medium';
+    font-weight: 100;
+    font-style: Medium;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    margin-top: 0;
+
 }
 
 .event-description {
@@ -93,7 +105,7 @@
     color: var(--text-dark);
     margin: 0;
     line-height: 1.5;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Avenir';
 }
 
 /* Detailed Schedule Section */
@@ -103,10 +115,13 @@
 
 .schedule-title {
     font-size: 2.5em;
-    font-weight: bold;
     color: var(--text-dark);
     margin: 0 0 40px 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'IvyOra Display Medium';
+    font-style: Medium;
+    color: #2F352A;
+    font-weight: 300;
+
 }
 
 .schedule-section {
@@ -115,10 +130,12 @@
 
 .schedule-subtitle {
     font-size: 1.5em;
-    font-weight: bold;
     color: var(--text-dark);
-    margin: 0 0 20px 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'IvyOra Display Medium';
+    font-style: Medium;
+    color: #2F352A;
+    margin: 20px 0;
+    font-weight: 300;
 }
 
 .schedule-list {
@@ -133,11 +150,13 @@
     gap: 20px;
     align-items: center;
 
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'IvyOra Display Medium';
+    font-style: Medium;
+    color: #435947;
+
 }
 
 .schedule-time {
-    font-weight: bold;
     color: var(--text-dark);
     font-size: 1em;
     text-align: center;
@@ -146,13 +165,18 @@
 .schedule-name {
     color: var(--text-dark);
     font-size: 1em;
-    font-weight: bold;
 }
 
 .schedule-performer {
     color: var(--text-dark);
-    font-size: 0.95em;
-    font-style: italic;
+    font-size: 0.80em;
+
+    font-family: Avenir;
+    font-weight: 350;
+    font-style: Book;
+    line-height: 100%;
+    letter-spacing: 0%;
+    align-content: center;
 }
 
 

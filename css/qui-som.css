@@ -4,19 +4,26 @@
      padding: 30px 30px 0;
      width: 100%;
      box-sizing: border-box;
+     font-family: 'IvyOra Display Medium';
+     font-weight: 300;
+     font-style: Medium;
  }
 
  .impulsors-section {
      margin-bottom: 40px;
-     text-align: center;
  }
 
  .impulsors-section h1 {
      font-size: 36px;
      margin-bottom: 2rem;
      color: #435947;
-     text-transform: uppercase;
      display: inline-block;
+     font-family: 'IvyOra Display Medium';
+     font-weight: 400;
+     font-style: Medium;
+     line-height: 100%;
+     letter-spacing: 0%;
+
  }
 
  .impulsors-content {
@@ -27,6 +34,17 @@
      padding: 0;
      border-radius: 0;
      margin-bottom: 2rem;
+     font-family: Avenir;
+     font-weight: 350;
+     font-style: Book;
+     line-height: 100%;
+     letter-spacing: 0%;
+     font-size: 18px;
+
+ }
+
+ .impulsors-content a {
+     color: #435947;
  }
 
  .impulsors-content p {
@@ -64,7 +82,6 @@
 
  .sponsors-section h3 {
      text-align: center;
-     text-transform: uppercase;
      margin-bottom: 2rem;
      font-size: 24px;
  }
@@ -110,7 +127,6 @@
      color: white;
      text-decoration: none;
      border-radius: 4px;
-     text-transform: uppercase;
      transition: background-color 0.3s ease;
  }
 
@@ -147,7 +163,6 @@
 
  .contact .contact-title {
      font-size: 36px;
-     text-transform: uppercase;
      margin-bottom: 3rem;
      color: #3e573a;
      text-align: left;
@@ -162,6 +177,7 @@
      border-radius: 0;
      box-shadow: none;
      overflow: hidden;
+     font-size: 18px;
  }
 
  /* Información de contacto a la izquierda */
@@ -169,6 +185,12 @@
      width: 40%;
      padding: 0;
      text-align: left;
+     font-family: Avenir;
+     font-weight: 350;
+     font-style: Book;
+     line-height: 100%;
+     letter-spacing: 0%;
+
  }
 
  .contact-info-group {
@@ -185,8 +207,8 @@
      color: #3e573a;
      display: block;
      margin-bottom: 0.5rem;
-     font-weight: 500;
-     font-size: 0.95rem;
+     font-weight: 300;
+
  }
 
  /* Formulario a la derecha */
@@ -255,6 +277,10 @@
      bottom: -25px;
      color: #FF6347;
      display: none;
+     font-family: Avenir;
+     font-weight: 350;
+     font-style: Book;
+     font-size: 16px;
  }
 
  .active-error-info {
@@ -312,6 +338,10 @@
 
  .popup-content p {
      margin: 0 100px;
+     font-family: Avenir;
+     font-weight: 350;
+     font-style: Book;
+
  }
 
  .popup-content h2 {
@@ -349,4 +379,4 @@
          background: linear-gradient(#cfe1cb, #f3ecd8);
          padding: 15px;
      }
-    }
+ }

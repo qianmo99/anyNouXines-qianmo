@@ -157,13 +157,30 @@ button.disabled {
     .section-description {
         font-size: 1.2rem
     }
-    .container{
+
+    .container {
         background-image: none;
     }
 }
 
+
+.section-title {
+    font-family: 'IvyOra Display Medium';
+    font-weight: 500;
+    font-size: 45px;
+    font-style: Medium;
+}
+
+.section-description {
+    font-style: normal;
+    font-family: 'IvyOra Display Medium';
+}
+
 /*-------------- page1 -------------*/
 /* General image styles */
+.historia-details .section-description{
+ font-family: 'Avenir';
+}
 #historia-origen .historia-content {
     background-color: #f3eee0;
     display: flex;
@@ -352,7 +369,7 @@ button.disabled {
 /* Mobile responsive for historia-continuacio */
 @media (max-width: 950px) {
     .scroll-section {
-        height:auto;
+        height: auto;
     }
 
     #historia-continuacio {
