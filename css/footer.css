@@ -299,7 +299,7 @@
     display: none;
 }
 
-a {
+.new-footer a {
     text-decoration: none;
     color: #435947;
 }
