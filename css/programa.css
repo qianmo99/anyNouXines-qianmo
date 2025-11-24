@@ -158,18 +158,18 @@
 
 .schedule-time {
     color: var(--text-dark);
-    font-size: 1em;
+    font-size: 18px;
     text-align: center;
 }
 
 .schedule-name {
     color: var(--text-dark);
-    font-size: 1em;
+    font-size: 18px;
 }
 
 .schedule-performer {
     color: var(--text-dark);
-    font-size: 0.80em;
+    font-size: 14px;
 
     font-family: Avenir;
     font-weight: 350;
@@ -241,12 +241,16 @@
     .program-location {
         font-size: 20px;
     }
+
     .event-title {
-         font-size: 25px;
+        font-size: 25px;
     }
-    .schedule-list, .event-block{
+
+    .schedule-list,
+    .event-block {
         font-size: 1rem;
     }
+
     .event-block {
         gap: 0px;
     }
