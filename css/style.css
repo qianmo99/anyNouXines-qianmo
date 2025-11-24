@@ -108,3 +108,6 @@ html {
 .main-button:hover {
     background-color: #c45a3c;
 }
+strong {
+     font-family: 'Avenir Medium';
+}
