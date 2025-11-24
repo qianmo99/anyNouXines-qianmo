@@ -88,7 +88,7 @@ button.disabled {
         display: block;
         width: 100%;
         height: auto;
-        
+
     }
 
     .scroll-section {
@@ -179,9 +179,10 @@ button.disabled {
 
 /*-------------- page1 -------------*/
 /* General image styles */
-.historia-details .section-description{
- font-family: 'Avenir';
+.historia-details .section-description {
+    font-family: 'Avenir';
 }
+
 #historia-origen .historia-content {
     background-color: #f3eee0;
     display: flex;
@@ -278,7 +279,7 @@ button.disabled {
     }
 
     #historia-origen .historia-details {
-        padding: 5%;
+        padding: 20px;
         flex-direction: column-reverse;
         justify-content: flex-end;
     }
@@ -374,10 +375,11 @@ button.disabled {
     }
 
     #historia-continuacio {
-        padding: 20px 15px;
+        padding: 20px 20px;
         /*min-height: 100vh;*/
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
     }
 
     #historia-continuacio .historia-content {
@@ -536,6 +538,7 @@ button.disabled {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        box-sizing: border-box;
     }
 
     #celebracio .historia-content {
@@ -686,6 +689,7 @@ button.disabled {
 @media (max-width: 950px) {
     #global-celebration {
         padding: 20px 15px;
+        box-sizing: border-box;
     }
 
     #global-celebration .historia-content {
@@ -693,6 +697,7 @@ button.disabled {
         flex-direction: column;
         gap: 25px;
         padding: 20px 0;
+        
     }
 
     #global-celebration .top-text {
