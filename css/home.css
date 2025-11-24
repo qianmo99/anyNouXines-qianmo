@@ -148,6 +148,7 @@ contact-btn {
     font-style: Medium;
     font-size: 50px;
     line-height: 100%;
+    margin: 0;
 }
 
 .info-text p {
@@ -156,9 +157,8 @@ contact-btn {
     font-family: Avenir;
     font-style: normal;
     font-size: 23px;
-    line-height: 100%;
     letter-spacing: 0%;
-
+    margin: 10px 0;
 }
 
 
@@ -179,7 +179,9 @@ contact-btn {
     align-content: center;
     align-self: flex-end;
     font-family: 'Avenir Medium';
-    font-size: 23px;
+    font-size: 21px;
+    margin: 10px 0;
+
 }
 
 .info-button:hover {
