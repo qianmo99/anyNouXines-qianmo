@@ -90,10 +90,14 @@ html {
 
 .gallery-item-description h3 {
     margin: 0 20px 0 20px;
+    font-style: normal;
+    font-family: 'IvyOra Display Medium';
+
 }
 
 .gallery-item-description p {
     margin: 5px 20px 30px 20px;
+    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .gallery-item:hover .gallery-item-description {
