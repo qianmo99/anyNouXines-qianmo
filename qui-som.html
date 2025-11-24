@@ -8,21 +8,87 @@
 
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/qui-som.css">
+    <link rel="stylesheet" href="css/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div id="navContainer">
-        <!-- meun会加载到这里 -->
+        <div class="navbar">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="assets/images/LOGO copy.png" alt="Any Nou Xinés Logo" class="logo-image">
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <ul class="nav-links">
+                        <li><a href="home.html" class="nav-link inici">INICI</a></li>
+                        <li class="dropdown">
+                            <a class="nav-link dracs">DRACS I ESTRELLES</a>
+                            <div class="dropdown-content">
+                                <a href="historia-origen.html" class="dropdown-item">Història i origen</a>
+                                <a href="404.html" class="dropdown-item">Zodíac xinès</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link activitats">ACTIVITATS</a>
+                            <div class="dropdown-content">
+                                <a href="programa.html" class="dropdown-item">Programació</a>
+                                <a href="404.html" class="dropdown-item">Activitats
+                                    Paral·leles</a>
+                                <a href="404.html" class="dropdown-item">Inscriu
+                                    Activitat</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link galeria">GALERIA</a>
+                            <div class="dropdown-content">
+                                <a href="galeria.html" class="dropdown-item">2025</a>
+                                <a href="404.html" class="dropdown-item">2023</a>
+                                <a href="404.html" class="dropdown-item">2022</a>
+                                <a href="404.html" class="dropdown-item">2021</a>
+                                <a href="404.html" class="dropdown-item">2017</a>
+                            </div>
+                        </li>
+                        <li><a href="qui-som.html" class="nav-link quisom">QUI SOM</a></li>
+                        <li class="nav-bar-separator">
+                            |
+                        </li>
+                        <li>
+                            <div class="nav-actions">
+                                <div class="language-selector">
+                                    <a href="#" class="lang-current">CAT</a>
+                                    <div class="lang-dropdown">
+                                        <a href="#" class="lang-item active" data-lang="cat">CAT</a>
+                                        <a href="#" class="lang-item" data-lang="es">ES</a>
+                                        <a href="#" class="lang-item" data-lang="cn">CN</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </div>
     <div id="content">
         <div class="container">
             <section class="impulsors-section">
                 <h1>Impulsors de l’Any Nou Xinès a Barcelona</h1>
                 <div class="impulsors-content">
-                    <p>L'Any Nou Xinès amb Barcelona és una celebració impulsada conjuntament per <a href="https://sites.google.com/view/barcelona-huaxing-arts-group/menu">l'Associació
-                        d'Artistes Huaxing</a>, la <a href="https://www.confuciobarcelona.cat/">Fundació Institut Confuci de Barcelona</a> i <a href="https://www.casaasia.cat/">Casa Àsia</a>, amb el suport de
-                        <a href="https://ajuntament.barcelona.cat/ca/">l'Ajuntament</a> i del <a href="https://barcelona.china-consulate.gov.cn/">Consolat General de la R.P. Xina</a>.</p>
+                    <p>L'Any Nou Xinès amb Barcelona és una celebració impulsada conjuntament per <a
+                            href="https://sites.google.com/view/barcelona-huaxing-arts-group/menu">l'Associació
+                            d'Artistes Huaxing</a>, la <a href="https://www.confuciobarcelona.cat/">Fundació Institut
+                            Confuci de Barcelona</a> i <a href="https://www.casaasia.cat/">Casa Àsia</a>, amb el suport
+                        de
+                        <a href="https://ajuntament.barcelona.cat/ca/">l'Ajuntament</a> i del <a
+                            href="https://barcelona.china-consulate.gov.cn/">Consolat General de la R.P. Xina</a>.
+                    </p>
                     <p>Més enllà de la seva organització, es tracta d'un esdeveniment cultural obert a tota la
                         ciutadania, que porta a Barcelona les traditions xineses com la dansa del drac, la gastronomia,
                         la música - i segueix sent un espai de convivència i enriquiment intercultural.</p>
@@ -73,7 +139,7 @@
                         </form>
                         <div id="success-popup" class="success-popup">
                             <div class="popup-content">
-                                <img  class="close-popup" src="assets/images/button/close.svg" alt="close-btn"/>
+                                <img class="close-popup" src="assets/images/button/close.svg" alt="close-btn" />
                                 <h2>¡Gracias por contactarnos!</h2>
                                 <p>Apreciamos tu interés. Hemos recibido tu mensaje y lo revisaremos lo antes posible.
                                 </p>
@@ -86,7 +152,126 @@
         </div>
     </div>
     <div id="footerContainer">
-        <!-- meun会加载到这里 -->
+        <footer class="new-footer">
+            <div class="footer-content">
+                <div class="column-left">
+                    <div class="section-row organize-collabora">
+                        <div class="section">
+                            <h3 class="section-title">Organitza</h3>
+                            <div class="logo-group">
+                                <img src="assets/images/footer/1_1organitza.png" alt="华星艺术团 HUANING ARTS GROUP logo"
+                                    class="logo organizer-logo">
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h3 class="section-title">Col·labora</h3>
+                            <div class="logo-group">
+                                <img src="assets/images/footer/1_2colabora.png" alt="Ajuntament de Barcelona logo"
+                                    class="logo colaborador-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3 class="section-title support-title">Amb el suport de</h3>
+                        <div class="logo-group support-group">
+                            <div class="support-item">
+                                <img src="assets/images/footer/2_1suport.png"
+                                    alt="Fundació Institut Confuci de Barcelona logo" class="logo support-logo">
+                            </div>
+                            <div class="support-item">
+                                <img src="assets/images/footer/2_2suport2.png" alt="Casa Asia logo"
+                                    class="logo support-logo">
+                            </div>
+                            <div class="support-item">
+                                <img src="assets/images/footer/2_3suport3.png"
+                                    alt="Consulado General de China en Barcelona logo" class="logo support-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3 class="section-title">Patrocinadors</h3>
+                        <div class="logo-group sponsor-group">
+                            <img src="assets/images/footer/3_1patrocinador.png" alt="Haier logo"
+                                class="logo sponsor-logo">
+                            <div class="sponsor-item">
+                                <img src="assets/images/footer/3_2patrocinador.png" alt="Assessoria ELCYM logo"
+                                    class="logo sponsor-logo">
+                            </div>
+                            <img src="assets/images/footer/3_3patrocinador.webp" alt="Sponsor logo"
+                                class="logo sponsor-logo ">
+                            <div class="sponsor-item">
+                                <img src="assets/images/footer/3_4patrocinador.png" alt="TeaPanda logo"
+                                    class="logo sponsor-logo">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="column-right">
+                    <div class="brand-header">
+                        <img src="assets/images/footer/2/logo_any nou xines2.png" alt="Any Nou Xinès Barcelona logo"
+                            class="main-logo">
+                    </div>
+
+                    <div class="contact-info">
+                        <p>Passeig de Sant Joan, 34 08010 Barcelona</p>
+                        <p>bcnhuaxingartsgroup@gmail.com</p>
+                    </div>
+
+                    <div class="social-icons">
+                        <img src="assets/images/footer/wechat.svg" alt="Wechat" class="footer-icon">
+
+                        <img src="assets/images/footer/facebook.svg" alt="Wechat" class="footer-icon">
+
+
+                        <img src="assets/images/footer/ins.svg" alt="Wechat" class="footer-icon">
+
+
+                        <img src="assets/images/footer/twitter.svg" alt="Wechat" class="footer-icon">
+
+                    </div>
+
+                    <div class="designer-info-box">
+                        <div class="legal-links">
+                            <p>Política de privadesa</p>
+                            <p>Política de Cookies</p>
+                            <p>Avís legal</p>
+                        </div>
+
+                        <div class="designer-info">
+                            <p>Design by Lijia</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p class="community-note">
+                L'esdeveniment compta també amb la col·laboració de diverses entitats de la comunitat xinesa i
+                catalana.
+            </p>
+            <div class="designer-info-mobile-box">
+                <div class="legal-links">
+                    <p>Política de privadesa</p>
+                    <p>Política de Cookies</p>
+                    <p>Avís legal</p>
+                </div>
+
+                <div class="designer-info">
+                    <p>Design by Lijia</p>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025, Any Nou Xinès amb Barcelona 2025. Todos los derechos reservados.</p>
+            </div>
+            <!--<div class="footer-bottom">
+            <p>&copy; 2025, Any Nou Xinès amb Barcelona 2025. Todos los derechos reservados.</p>
+        </div> -->
+        </footer>
     </div>
     <script src="js/qui-som.js"></script>
     <script src="js/loadMenu.js"></script>
