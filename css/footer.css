@@ -3,7 +3,7 @@
     width: 100%;
     padding: 40px 0 20px;
     position: relative;
-    background: linear-gradient(to bottom, #f3eee0 0%, #b8d2b0 100%);
+    background: linear-gradient(to bottom, #FFF8EB 0%, #b8d2b0 100%);
     overflow: hidden;
     color: #435947;
     font-family: Avenir;
@@ -268,7 +268,7 @@
 }
 
 .contact-info p {
-    margin: 5px 0;
+    margin: 20px 0;
     color: var(--text-dark);
 }
 
@@ -276,17 +276,19 @@
     display: flex;
     justify-content: flex-end;
     /* 右对齐 */
-    gap: 10px;
-    margin: 25px 0;
+    gap: 30px;
+    margin: 20px 0;
 }
-
+.social-icons a{
+    height: 5vh;
+}
 .footer-icon {
     width: 5vh;
     height: auto;
 }
 
 .legal-links p {
-    margin: 5px 0;
+    margin: 20px 0;
     line-height: 1.2;
     color: var(--text-dark);
 }

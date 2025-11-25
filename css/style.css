@@ -80,7 +80,7 @@ html {
     /* Avenir Book */
     color: #435947;
     /* Background color is now defined in fixes.css */
-    background-color: #f3eee0 !important;
+    background-color: #FFF8EB !important;
 }
 
 #content {
@@ -90,7 +90,7 @@ html {
 .main-button {
     display: inline-block;
     width: fit-content;
-    background-color: #dd7050;
+    background-color: #DB5D34;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
