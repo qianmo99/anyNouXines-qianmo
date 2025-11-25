@@ -43,8 +43,8 @@ body::-webkit-scrollbar {
 
 
 .nav-btn {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
 }
 
 .prev-section {
@@ -363,8 +363,9 @@ button.disabled {
 #historia-continuacio .highlight-fort,
 #historia-continuacio .highlight-vermell,
 #historia-continuacio .highlight-proteccio,
-#historia-continuacio .highlight-prosperitat {
-    color: #ff4d4f;
+#historia-continuacio .highlight-prosperitat,
+#global-celebration  .highlight-barcelona {
+    color: #DB5D34;
     font-weight: normal;
 }
 
@@ -526,7 +527,7 @@ button.disabled {
 #celebracio .highlight-lleo,
 #celebracio .highlight-sobres,
 #celebracio .highlight-hongbao {
-    color: #ff4d4f;
+    color: #DB5D34;
     font-weight: normal;
 }
 
@@ -681,7 +682,6 @@ button.disabled {
 #global-celebration .initial-letter {}
 
 #global-celebration .highlight-barcelona {
-    color: #ff4d4f;
     font-weight: normal;
 }
 

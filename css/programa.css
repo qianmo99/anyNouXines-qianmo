@@ -141,12 +141,12 @@
 .schedule-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+
 }
 
 .schedule-item {
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 120px 1fr;
     gap: 20px;
     align-items: center;
 
@@ -198,8 +198,26 @@
     font-size: 1.3rem;
 }
 
+@media screen and (min-width: 950px) {
+    .schedule-time {
+        font-size: 23px;
+    }
+
+    .schedule-name {
+        font-size: 23px;
+    }
+
+    .schedule-performer {
+        font-size: 18px;
+    }
+}
+
 /*mobile*/
 @media screen and (max-width: 950px) {
+    .schedule-name {
+        margin-bottom: 10px;
+    }
+
     .event-content {
         flex-direction: column;
         align-items: start;
